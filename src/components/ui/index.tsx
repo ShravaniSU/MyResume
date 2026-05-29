@@ -1,6 +1,8 @@
 import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 
+export { ThemeToggle } from './ThemeToggle';
+
 interface GlassCardProps {
   children: ReactNode;
   className?: string;
@@ -34,7 +36,7 @@ export const SectionHeading = ({ title, subtitle, center = false }: SectionHeadi
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className="text-4xl md:text-5xl mb-4 bg-clip-text text-transparent bg-gradient-to-r from-accent-lavender to-accent-mint"
+        className="text-4xl md:text-5xl mb-4 font-display font-bold text-text-primary"
       >
         {title}
       </motion.h2>
@@ -54,7 +56,8 @@ export const SectionHeading = ({ title, subtitle, center = false }: SectionHeadi
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ delay: 0.4, duration: 0.8 }}
-        className={`h-1 w-20 bg-gradient-to-r from-accent-lavender to-accent-mint mt-4 ${center ? 'mx-auto' : ''}`}
+        className={`h-1 w-20 mt-4 ${center ? 'mx-auto' : ''}`}
+        style={{ backgroundColor: 'var(--accent-medium)' }}
       />
     </div>
   );

@@ -1,16 +1,84 @@
 @import "tailwindcss";
 
+:root {
+  /* Dark Theme */
+  --bg-primary: #0f0e17;
+  --bg-secondary: #1a1a2e;
+  --bg-band: #141427;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-hover: rgba(255, 255, 255, 0.08);
+  --text-primary: #fffffe;
+  --text-secondary: #94a3b8;
+  --accent-lavender: #a78bfa;
+  --accent-mint: #6ee7b7;
+  --accent-pink: #f9a8d4;
+  --accent-beige: #fde68a;
+  /* Ensure violet-only accents in dark mode */
+  --bg-odd: var(--bg-primary);
+  --bg-even: var(--bg-band);
+  --bg-card-solid: rgba(255,255,255,0.02);
+  --accent-primary: #a78bfa;
+  --accent-secondary: #a78bfa;
+  --accent-medium: #a78bfa;
+  --accent-strong: #a78bfa;
+  --accent-mint: #a78bfa;
+  --accent-pink: #a78bfa;
+  --accent-beige: #a78bfa;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --section-border: rgba(255, 255, 255, 0.06);
+  --primary-start: #667eea;
+  --primary-end: #764ba2;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --nav-active-accent: #6ee7b7;
+}
+
+[data-theme="light"] {
+  /* Structural light theme colors */
+  --bg-primary: #fbfcfd; /* premium off-white for odd sections */
+  --bg-secondary: #ffffff;
+  /* Even sections: 5% tint of #3B7597 -> approx #f5f8fa */
+  --bg-band: #f5f8fa;
+  --bg-odd: #fbfcfd;
+  --bg-even: #f5f8fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f7fafb;
+  --bg-card-solid: #2C687B; /* Deep Teal for card blocks */
+  --text-primary: #093C5D; /* Prussian Blue for headings */
+  --text-secondary: #3B7597; /* Steel Blue for body text */
+  /* Map legacy accent tokens to the requested palette */
+  --accent-lavender: #093C5D; /* headings */
+  --accent-mint: #6FD1D7;    /* icon highlights / active states */
+  --accent-pink: #547792;    /* medium slate for accents/badges */
+  --accent-beige: #2C687B;   /* deep teal for solid card BG */
+  --accent-primary: #093C5D;
+  --accent-secondary: #3B7597;
+  --accent-medium: #547792;
+  --accent-strong: #6FD1D7;
+  --border-color: rgba(59, 117, 151, 0.12);
+  --section-border: rgba(59, 117, 151, 0.12);
+  --shadow-color: rgba(9, 60, 93, 0.08);
+  --nav-active-accent: #547792;
+}
+
 @theme {
-  --color-primary-start: #667eea;
-  --color-primary-end: #764ba2;
-  --color-bg-dark: #0f0e17;
-  --color-bg-alt: #1a1a2e;
-  --color-accent-lavender: #a78bfa;
-  --color-accent-mint: #6ee7b7;
-  --color-accent-pink: #f9a8d4;
-  --color-accent-beige: #fde68a;
-  --color-text-primary: #fffffe;
-  --color-text-secondary: #94a3b8;
+  --color-primary-start: var(--accent-secondary);
+  --color-primary-end: var(--accent-secondary);
+  
+  --color-bg-dark: var(--bg-primary);
+  --color-bg-alt: var(--bg-secondary);
+  --color-bg-band: var(--bg-band);
+  --color-bg-card: var(--bg-card);
+  --color-bg-card-hover: var(--bg-card-hover);
+  --color-bg-card-solid: var(--bg-card-solid);
+  --color-accent-primary: var(--accent-primary);
+  --color-accent-secondary: var(--accent-secondary);
+  --color-accent-medium: var(--accent-medium);
+  --color-accent-strong: var(--accent-strong);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-border-color: var(--border-color);
+  --color-section-border: var(--section-border);
+  --color-nav-active-accent: var(--nav-active-accent);
   
   --font-display: "Outfit", sans-serif;
   --font-body: "Inter", sans-serif;
@@ -23,36 +91,52 @@
   }
   
   body {
-    @apply bg-bg-dark text-text-primary font-body antialiased;
+    @apply bg-bg-dark text-text-primary font-body antialiased transition-colors duration-300;
     margin: 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display font-bold;
+    @apply font-display font-bold text-text-primary transition-colors duration-300;
   }
 }
 
 @utility glass {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--bg-card);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
   border-radius: 1rem;
 }
 
 @utility glass-card {
   @apply glass shadow-2xl transition-all duration-300;
+  box-shadow: 0 25px 50px -12px var(--shadow-color);
 }
 
 @utility btn-primary {
-  @apply px-8 py-3 rounded-full bg-gradient-to-r from-primary-start to-primary-end font-bold text-white shadow-lg hover:shadow-primary-start/20 hover:scale-105 transition-all duration-300;
+  @apply px-8 py-3 rounded-full font-bold text-white shadow-lg hover:shadow-[0_16px_32px_-18px_rgba(9,60,93,0.35)] hover:scale-105 transition-all duration-300 cursor-pointer;
+  background-color: var(--accent-strong);
 }
 
 @utility btn-outline {
-  @apply px-8 py-3 rounded-full border border-white/20 font-bold text-white hover:bg-white/5 hover:border-white/40 transition-all duration-300;
+  @apply px-8 py-3 rounded-full border font-bold text-text-primary hover:text-text-primary transition-all duration-300 cursor-pointer;
+  border-color: var(--border-color);
+  background-color: transparent;
 }
 
 @utility section-padding {
   @apply py-20 px-6 md:px-12 lg:px-24;
+}
+
+@utility section-band {
+  background-color: var(--bg-even);
+  border-top: 1px solid var(--section-border);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+@utility section-divider {
+  background-color: var(--bg-odd);
+  border-top: 1px solid var(--section-border);
+  transition: background-color 0.3s, border-color 0.3s;
 }
 
 /* Custom Animations */
@@ -73,4 +157,21 @@
 
 .animation-delay-4000 {
   animation-delay: 4s;
+}
+
+/* Light Mode Solid Fill Overrides (Gradients & Backdrop Filters elimination) */
+[data-theme="light"] .gradient-text,
+[data-theme="light"] .gradient-bar,
+[data-theme="light"] .gradient-ribbon {
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  -webkit-text-fill-color: unset !important;
+  color: inherit !important;
+}
+
+[data-theme="light"] .glass,
+[data-theme="light"] .glass-card {
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }

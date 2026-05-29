@@ -24,8 +24,14 @@ export interface Education {
 
 export interface Certification {
   name: string;
+  link?: string;
   issuer?: string;
   year?: string;
+}
+
+export interface CertificationGroup {
+  provider: string;
+  certs: Certification[];
 }
 
 export interface Project {
@@ -34,6 +40,8 @@ export interface Project {
   description: string;
   tech: string[];
   link?: string;
+  isFeatured?: boolean;
+  features?: string[];
 }
 
 export interface SkillCategory {

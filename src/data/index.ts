@@ -1,4 +1,4 @@
-import type { Profile, Experience, Education, Certification, SkillCategory, Project } from '../types';
+import type { Profile, Experience, Education, CertificationGroup, SkillCategory, Project } from '../types';
 
 export const profileData: Profile = {
   name: "Shravani Shirish Urankar",
@@ -65,58 +65,83 @@ export const education: Education[] = [
   }
 ];
 
-export const certifications: Certification[] = [
-  { name: "Microsoft Certified: Azure Fundamentals" },
-  { name: "Crash Course: Linux For Absolute Beginners" },
-  { name: "Crash Course: AWS Basics" },
-  { name: "Docker Training Course for the Absolute Beginner" },
-  { name: "React Bootcamp" },
-  { name: "Java (Basic)" },
-  { name: "SQL (Basics)" }
+export const certificationGroups: CertificationGroup[] = [
+  {
+    provider: "Microsoft",
+    certs: [
+      { name: "Microsoft Certified: Azure Fundamentals", link: "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/" },
+      { name: "Microsoft Certified: Azure Data Fundamentals", link: "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/" },
+      { name: "Microsoft Certified Power Platform Fundamentals", link: "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/" }
+    ]
+  },
+  {
+    provider: "KodeKloud",
+    certs: [
+      { name: "KodeKloud Engineer - Docker (Level 1)", link: "https://kodekloud.com/" },
+      { name: "Crash Course: Docker For Absolute Beginners", link: "https://kodekloud.com/" },
+      { name: "Amazon Elastic Container Service (AWS ECS)", link: "https://kodekloud.com/" },
+      { name: "Crash Course: Kubernetes For Absolute Beginners", link: "https://kodekloud.com/" },
+      { name: "Crash Course: Linux For Absolute Beginners", link: "https://kodekloud.com/" },
+      { name: "Docker Training Course for the Absolute Beginner", link: "https://kodekloud.com/" },
+      { name: "Crash Course: AWS Basics", link: "https://kodekloud.com/" },
+      { name: "KodeKloud Engineer - Git (Level 1)", link: "https://kodekloud.com/" }
+    ]
+  }
 ];
 
 export const skills: SkillCategory[] = [
   {
-    title: "Cloud & Infrastructure",
+    title: "Languages",
     skills: [
-      { name: "AWS (EC2, S3)" },
-      { name: "Azure" },
-      { name: "Linux" },
-      { name: "Nginx" }
+      { name: "Java" },
+      { name: "C#" },
+      { name: "Python" },
+      { name: "JavaScript" }
     ]
   },
   {
-    title: "DevOps & Automation",
+    title: "Frameworks & Libraries",
+    skills: [
+      { name: ".NET (Dotnet)" },
+      { name: "React" },
+      { name: "HTML5" },
+      { name: "CSS3" }
+    ]
+  },
+  {
+    title: "Databases",
+    skills: [
+      { name: "PostgreSQL" }
+    ]
+  },
+  {
+    title: "Tools & DevOps/Cloud Infrastructure",
     skills: [
       { name: "Docker" },
-      { name: "GitHub Actions" },
-      { name: "Netdata" },
-      { name: "Systemd" },
-      { name: "Bash Scripting" }
-    ]
-  },
-  {
-    title: "Development",
-    skills: [
-      { name: "React" },
-      { name: "Node.js" },
-      { name: "Express" },
-      { name: "PostgreSQL" },
-      { name: "Python" }
-    ]
-  },
-  {
-    title: "Other Tools",
-    skills: [
-      { name: "Git" },
-      { name: "SQL" },
-      { name: "Java" },
-      { name: "OpenAI API" }
+      { name: "Kubernetes" },
+      { name: "Linux" },
+      { name: "Amazon EC2" },
+      { name: "Amazon S3" }
     ]
   }
 ];
 
 export const projects: Project[] = [
+  {
+    name: "TaskFlow",
+    repoName: "TaskFlow",
+    description: "A secure, multi-container task management system designed with strict input payload sanitation and a robust containerized infrastructure.",
+    tech: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "Zod", "CI/CD"],
+    link: "https://github.com/ShravaniSU/TaskFlow",
+    isFeatured: true,
+    features: [
+      "Complete Task Lifecycle: Full CRUD operational support designed with strict input payload sanitation via Zod.",
+      "Isolated Multi-Container Ecosystem: Isolated networks keeping the PostgreSQL layer decoupled from outside web exposure.",
+      "Nginx Reverse Proxy: Unified traffic routing directing client request boundaries across specific container boundaries seamlessly.",
+      "Infrastructure as Code (IaC): Single-command reproducible hardware definitions utilizing HashiCorp Terraform alongside declarative Ansible scripts.",
+      "Automated CI/CD Blueprint: Production pipeline running integration compilation checks prior to rolling container deployments."
+    ]
+  },
   {
     name: "AI-Powered Notes App",
     repoName: "NotesApp",
