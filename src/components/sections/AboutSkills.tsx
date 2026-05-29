@@ -5,7 +5,7 @@ import { Terminal, Cpu, Cloud, Settings, Layers } from 'lucide-react';
 
 export const About = () => {
   return (
-    <section id="about" className="section-padding section-band relative">
+    <section id="about" className="section-padding section-divider relative">
       <div className="container mx-auto">
         <SectionHeading 
           title="About Me" 
@@ -17,7 +17,7 @@ export const About = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="space-y-6 text-lg text-text-secondary leading-relaxed transition-colors duration-300"
+            className="space-y-6 text-lg font-medium text-text-secondary leading-relaxed transition-colors duration-300"
           >
             <p>
               {profileData.summary}

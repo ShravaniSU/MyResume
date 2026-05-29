@@ -34,28 +34,28 @@
 
 [data-theme="light"] {
   /* Structural light theme colors */
-  --bg-primary: #fbfcfd; /* premium off-white for odd sections */
+  --bg-primary: #F4F7F9; /* warm soft off-white for odd sections */
   --bg-secondary: #ffffff;
-  /* Even sections: 5% tint of #3B7597 -> approx #f5f8fa */
-  --bg-band: #f5f8fa;
-  --bg-odd: #fbfcfd;
-  --bg-even: #f5f8fa;
+  /* Even sections: light slate tint */
+  --bg-band: #E6EEF2;
+  --bg-odd: #F4F7F9;
+  --bg-even: #E6EEF2;
   --bg-card: #ffffff;
-  --bg-card-hover: #f7fafb;
+  --bg-card-hover: #F4F7F9;
   --bg-card-solid: #2C687B; /* Deep Teal for card blocks */
-  --text-primary: #093C5D; /* Prussian Blue for headings */
-  --text-secondary: #3B7597; /* Steel Blue for body text */
+  --text-primary: #093C5D; /* Prussian Blue for headings - highly readable */
+  --text-secondary: #1D4560; /* Dark slate variant of #3B7597 for body text (high contrast) */
   /* Map legacy accent tokens to the requested palette */
   --accent-lavender: #093C5D; /* headings */
-  --accent-mint: #6FD1D7;    /* icon highlights / active states */
+  --accent-mint: #547792;    /* active states */
   --accent-pink: #547792;    /* medium slate for accents/badges */
   --accent-beige: #2C687B;   /* deep teal for solid card BG */
   --accent-primary: #093C5D;
   --accent-secondary: #3B7597;
   --accent-medium: #547792;
-  --accent-strong: #6FD1D7;
-  --border-color: rgba(59, 117, 151, 0.12);
-  --section-border: rgba(59, 117, 151, 0.12);
+  --accent-strong: #093C5D;
+  --border-color: rgba(59, 117, 151, 0.15);
+  --section-border: rgba(59, 117, 151, 0.20); /* clean 1px border using #3B7597 with 20% opacity */
   --shadow-color: rgba(9, 60, 93, 0.08);
   --nav-active-accent: #547792;
 }
@@ -174,4 +174,24 @@
 [data-theme="light"] .glass-card {
   backdrop-filter: none !important;
   -webkit-backdrop-filter: none !important;
+  background-color: var(--bg-secondary) !important;
+  border-color: rgba(59, 117, 151, 0.15) !important;
+}
+
+/* Light mode specific typography and readability overhaul */
+[data-theme="light"] h2 {
+  color: #093C5D !important;
+  font-weight: 900 !important; /* Bold/Black */
+  line-height: 1.625 !important; /* leading-relaxed */
+}
+
+[data-theme="light"] p,
+[data-theme="light"] ul,
+[data-theme="light"] li {
+  color: #093C5D !important; /* Prussian Blue for high contrast */
+  font-weight: 500 !important; /* medium font weight */
+}
+
+[data-theme="light"] .text-text-secondary {
+  color: #1D4560 !important; /* Steel Blue Dark variant */
 }

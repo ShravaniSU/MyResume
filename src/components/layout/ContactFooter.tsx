@@ -19,69 +19,69 @@ export const Contact = () => {
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 mt-12">
           {/* Contact Info */}
           <div className="space-y-8">
-            <h3 className="text-3xl font-bold text-text-primary mb-6 transition-colors duration-300">Let's connect</h3>
-            <p className="text-text-secondary text-lg leading-relaxed transition-colors duration-300">
+            <h3 className="text-3xl font-extrabold text-text-primary mb-6 transition-colors duration-300">Let's connect</h3>
+            <p className="text-text-secondary text-lg font-medium leading-relaxed transition-colors duration-300">
               I'm always open to discussing new projects, infrastructure setups, or opportunities to automate and scale your workflows.
             </p>
             
             <div className="space-y-6">
               <a href={`mailto:${profileData.email}`} className="flex items-center group cursor-pointer">
-                <div className="p-4 bg-bg-card border border-border-color rounded-2xl text-accent-lavender mr-6 group-hover:bg-accent-lavender group-hover:text-white transition-all duration-300">
+                <div className="p-4 bg-bg-card border border-[rgba(59,117,151,0.15)] rounded-2xl text-accent-lavender mr-6 group-hover:bg-accent-lavender group-hover:text-white transition-all duration-300">
                   <Mail size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-text-secondary transition-colors duration-300">Email me at</p>
-                  <p className="text-lg font-bold text-text-primary transition-colors duration-300">{profileData.email}</p>
+                  <p className="text-xs uppercase tracking-wider font-extrabold text-text-secondary transition-colors duration-300">Email me at</p>
+                  <p className="text-lg font-extrabold text-text-primary transition-colors duration-300">{profileData.email}</p>
                 </div>
               </a>
               
               <a href={profileData.linkedin} target="_blank" rel="noreferrer" className="flex items-center group cursor-pointer">
-                <div className="p-4 bg-bg-card border border-border-color rounded-2xl text-[#0077b5] mr-6 group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                <div className="p-4 bg-bg-card border border-[rgba(59,117,151,0.15)] rounded-2xl text-[#0077b5] mr-6 group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
                   <FaLinkedin size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-text-secondary transition-colors duration-300">Connect on</p>
-                  <p className="text-lg font-bold text-text-primary transition-colors duration-300">LinkedIn</p>
+                  <p className="text-xs uppercase tracking-wider font-extrabold text-text-secondary transition-colors duration-300">Connect on</p>
+                  <p className="text-lg font-extrabold text-text-primary transition-colors duration-300">LinkedIn</p>
                 </div>
               </a>
               
               <a href={profileData.github} target="_blank" rel="noreferrer" className="flex items-center group cursor-pointer">
-                <div className="p-4 bg-bg-card border border-border-color rounded-2xl text-text-primary mr-6 group-hover:bg-text-primary group-hover:text-bg-dark transition-all duration-300">
+                <div className="p-4 bg-bg-card border border-[rgba(59,117,151,0.15)] rounded-2xl text-text-primary mr-6 group-hover:bg-text-primary group-hover:text-bg-dark transition-all duration-300">
                   <FaGithub size={24} />
                 </div>
                 <div>
-                  <p className="text-sm text-text-secondary transition-colors duration-300">Follow on</p>
-                  <p className="text-lg font-bold text-text-primary transition-colors duration-300">GitHub</p>
+                  <p className="text-xs uppercase tracking-wider font-extrabold text-text-secondary transition-colors duration-300">Follow on</p>
+                  <p className="text-lg font-extrabold text-text-primary transition-colors duration-300">GitHub</p>
                 </div>
               </a>
             </div>
           </div>
 
           {/* Contact Form */}
-          <GlassCard className="p-8 border-border-color">
+          <GlassCard className="p-8 border-[rgba(59,117,151,0.15)]">
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-text-secondary ml-1 transition-colors duration-300">Full Name</label>
+                <label className="text-sm font-bold text-text-primary ml-1 transition-colors duration-300">Full Name</label>
                 <input 
                   type="text" 
                   placeholder="John Doe"
-                  className="w-full bg-bg-secondary border border-border-color rounded-xl px-4 py-3 text-text-primary placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300"
+                  className="w-full bg-bg-secondary border border-[rgba(59,117,151,0.15)] rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-text-secondary ml-1 transition-colors duration-300">Email Address</label>
+                <label className="text-sm font-bold text-text-primary ml-1 transition-colors duration-300">Email Address</label>
                 <input 
                   type="email" 
                   placeholder="john@example.com"
-                  className="w-full bg-bg-secondary border border-border-color rounded-xl px-4 py-3 text-text-primary placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300"
+                  className="w-full bg-bg-secondary border border-[rgba(59,117,151,0.15)] rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-text-secondary ml-1 transition-colors duration-300">Your Message</label>
+                <label className="text-sm font-bold text-text-primary ml-1 transition-colors duration-300">Your Message</label>
                 <textarea 
                   rows={4}
                   placeholder="Tell me about your project..."
-                  className="w-full bg-bg-secondary border border-border-color rounded-xl px-4 py-3 text-text-primary placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300 resize-none"
+                  className="w-full bg-bg-secondary border border-[rgba(59,117,151,0.15)] rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300 resize-none"
                 />
               </div>
               <button className="btn-primary w-full flex items-center justify-center cursor-pointer">

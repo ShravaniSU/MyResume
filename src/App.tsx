@@ -2,7 +2,6 @@ import { useTheme } from './hooks/useTheme';
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/sections/Hero';
 import { About, Skills } from './components/sections/AboutSkills';
-import { FeaturedProject } from './components/sections/FeaturedProject';
 import { Projects } from './components/sections/Projects';
 import { Experience, EducationCertifications } from './components/sections/ExperienceEdu';
 import { Contact, Footer } from './components/layout/ContactFooter';
@@ -17,7 +16,6 @@ function App() {
         <Hero />
         <About />
         <Skills />
-        <FeaturedProject />
         <Projects />
         <Experience />
         <EducationCertifications />

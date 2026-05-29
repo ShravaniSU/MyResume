@@ -46,7 +46,7 @@ export const SectionHeading = ({ title, subtitle, center = false }: SectionHeadi
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
-          className="text-text-secondary text-lg max-w-2xl"
+          className={`text-text-secondary text-lg max-w-2xl ${center ? 'mx-auto text-center' : ''}`}
         >
           {subtitle}
         </motion.p>

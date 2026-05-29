@@ -58,7 +58,7 @@ export const Hero = () => {
           transition={{ delay: 0.6 }}
           className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6"
         >
-          <a href="#featured-project" className="btn-primary flex items-center group">
+          <a href="#projects" className="btn-primary flex items-center group">
             <span>View Projects</span>
             <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
           </a>
