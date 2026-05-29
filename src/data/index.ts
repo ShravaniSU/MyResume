@@ -91,6 +91,16 @@ export const certificationGroups: CertificationGroup[] = [
 
 export const skills: SkillCategory[] = [
   {
+    title: "Tools & DevOps/Cloud Infrastructure",
+    skills: [
+      { name: "Docker" },
+      { name: "Kubernetes" },
+      { name: "Linux" },
+      { name: "Amazon EC2" },
+      { name: "Amazon S3" }
+    ]
+  },
+  {
     title: "Languages",
     skills: [
       { name: "Java" },
@@ -111,17 +121,8 @@ export const skills: SkillCategory[] = [
   {
     title: "Databases",
     skills: [
-      { name: "PostgreSQL" }
-    ]
-  },
-  {
-    title: "Tools & DevOps/Cloud Infrastructure",
-    skills: [
-      { name: "Docker" },
-      { name: "Kubernetes" },
-      { name: "Linux" },
-      { name: "Amazon EC2" },
-      { name: "Amazon S3" }
+      { name: "PostgreSQL" },
+      { name: "MySQL" }
     ]
   }
 ];
@@ -130,8 +131,8 @@ export const projects: Project[] = [
   {
     name: "TaskFlow",
     repoName: "TaskFlow",
-    description: "A secure, multi-container task management system designed with strict input payload sanitation and a robust containerized infrastructure.",
-    tech: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "Zod", "CI/CD"],
+    description: "Built and deployed a production-grade full-stack task management platform with automated CI/CD workflows, containerized services, reverse proxy architecture, and Infrastructure as Code practices.",
+    tech: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "CI/CD"],
     link: "https://github.com/ShravaniSU/TaskFlow",
     isFeatured: true,
     features: [
@@ -143,10 +144,23 @@ export const projects: Project[] = [
     ]
   },
   {
-    name: "AI-Powered Notes App",
-    repoName: "NotesApp",
-    description: "A production-ready Notion-like notes app with AI features for summarization and key-point extraction.",
-    tech: ["React", "Node.js", "PostgreSQL", "OpenAI"]
+    name: "Secure AWS Bastion Host Architecture",
+    repoName: "aws-bastion-host",
+    description: "Designed and deployed a secure AWS network architecture with isolated private subnets, hardened SSH access controls, and Bastion Host based administrative access.",
+    tech: ["AWS", "VPC", "EC2", "Security Groups", "SSH", "Networking"]
+  },
+  {
+    name: "Terraform AWS Infrastructure Project",
+    repoName: "terraform-aws-infra",
+    description: "Automated cloud infrastructure provisioning on AWS using Terraform with reproducible Infrastructure as Code workflows and secure remote server access.",
+    tech: ["Terraform", "AWS", "EC2", "IAM", "Ubuntu", "SSH"]
+  },
+  {
+    name: "Cyberpunk Static Website Deployment with Ansible",
+    repoName: "ansible-static-site-deployment",
+    description: "Automated Linux server provisioning and static website deployment using Ansible with reusable role-based infrastructure and Nginx configuration on AWS.",
+    tech: ["Ansible", "AWS EC2", "Ubuntu", "Nginx", "React", "TypeScript"],
+    link: "https://github.com/ShravaniSU/Cyberpunk"
   },
   {
     name: "Travel Journal (CI/CD)",
