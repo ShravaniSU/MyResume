@@ -288,3 +288,165 @@
   border-color: #5DF8D8 !important;
   box-shadow: 0 15px 40px rgba(93,248,216,0.25) !important;
 }
+
+/* Premium Light Mode Section Background Differentiation */
+[data-theme="light"] #about {
+  position: relative;
+  background:
+    radial-gradient(circle at top left, rgba(93,248,216,0.12), transparent 35%),
+    linear-gradient(180deg, #F8FCFD, #EEF8FA) !important;
+}
+[data-theme="light"] #about::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(93,248,216,0.15), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+[data-theme="light"] #skills {
+  position: relative;
+  background: linear-gradient(180deg, #EAF5FB, #DDEEF8) !important;
+}
+[data-theme="light"] #skills::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  background-image: 
+    radial-gradient(circle, #3B7597 1.5px, transparent 1.5px),
+    linear-gradient(45deg, transparent 49%, rgba(59,117,151,0.2) 50%, transparent 51%);
+  background-size: 30px 30px, 200px 200px;
+  pointer-events: none;
+}
+[data-theme="light"] #skills::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 500px;
+  height: 500px;
+  background: rgba(93,248,216,0.08);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="light"] #projects {
+  position: relative;
+  background: linear-gradient(135deg, #F9FCFF, #EDF8FF) !important;
+}
+[data-theme="light"] #projects::before {
+  content: "</>  { }  deploy  --prod  const  await  git-push  docker-run  kube-apply";
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 800;
+  color: rgba(9, 60, 93, 0.02);
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  line-height: 4;
+  letter-spacing: 12px;
+  word-spacing: 24px;
+  overflow: hidden;
+  pointer-events: none;
+}
+[data-theme="light"] #projects::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  width: 150px;
+  height: 150px;
+  border: 2px dashed rgba(93,248,216,0.15);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  animation: blob 20s infinite linear;
+  pointer-events: none;
+}
+
+[data-theme="light"] #experience {
+  background: linear-gradient(180deg, #EDF8FF, #F7FCFB) !important;
+}
+
+[data-theme="light"] #education {
+  position: relative;
+  background: linear-gradient(180deg, #F7FCFB, #ECF8F5) !important;
+}
+[data-theme="light"] #education::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  width: 220px;
+  height: 140px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(9, 60, 93, 0.04);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(9, 60, 93, 0.02);
+  transform: rotate(-6deg);
+  pointer-events: none;
+}
+[data-theme="light"] #education::after {
+  content: "";
+  position: absolute;
+  bottom: 10%;
+  right: 5%;
+  width: 280px;
+  height: 180px;
+  background: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(9, 60, 93, 0.04);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(9, 60, 93, 0.02);
+  transform: rotate(4deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+[data-theme="light"] #contact {
+  position: relative;
+  background: linear-gradient(135deg, #E9F8FA, #DDF3F7) !important;
+}
+[data-theme="light"] #contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at bottom right, rgba(93,248,216,0.15), transparent 40%);
+  pointer-events: none;
+}
+[data-theme="light"] #contact::after {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(93,248,216,0.18), transparent 70%);
+  filter: blur(120px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Elegant Light Mode Section Divider Zone */
+.section-divider-bar {
+  height: 0;
+  background: transparent;
+  transition: height 0.3s;
+}
+[data-theme="light"] .section-divider-bar {
+  height: 120px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(255,255,255,0.45),
+    transparent
+  ) !important;
+  position: relative;
+  z-index: 10;
+  pointer-events: none;
+}
