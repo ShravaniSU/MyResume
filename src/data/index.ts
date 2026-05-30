@@ -69,22 +69,22 @@ export const certificationGroups: CertificationGroup[] = [
   {
     provider: "Microsoft",
     certs: [
-      { name: "Microsoft Certified: Azure Fundamentals", link: "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/" },
-      { name: "Microsoft Certified: Azure Data Fundamentals", link: "https://learn.microsoft.com/en-us/credentials/certifications/azure-data-fundamentals/" },
+      { name: "Microsoft Certified: Azure Fundamentals", link: "https://www.credly.com/badges/3c629c85-0b03-4604-82ec-a9d895c0bc09?source=linked_in_profile" },
+      { name: "Microsoft Certified: Azure Data Fundamentals", link: "https://www.credly.com/badges/d99f7fc8-291e-4423-8c0d-3bed302c3d1a/public_url" },
       { name: "Microsoft Certified Power Platform Fundamentals", link: "https://learn.microsoft.com/en-us/credentials/certifications/power-platform-fundamentals/" }
     ]
   },
   {
     provider: "KodeKloud",
     certs: [
-      { name: "KodeKloud Engineer - Docker (Level 1)", link: "https://kodekloud.com/" },
-      { name: "Crash Course: Docker For Absolute Beginners", link: "https://kodekloud.com/" },
-      { name: "Amazon Elastic Container Service (AWS ECS)", link: "https://kodekloud.com/" },
-      { name: "Crash Course: Kubernetes For Absolute Beginners", link: "https://kodekloud.com/" },
-      { name: "Crash Course: Linux For Absolute Beginners", link: "https://kodekloud.com/" },
-      { name: "Docker Training Course for the Absolute Beginner", link: "https://kodekloud.com/" },
-      { name: "Crash Course: AWS Basics", link: "https://kodekloud.com/" },
-      { name: "KodeKloud Engineer - Git (Level 1)", link: "https://kodekloud.com/" }
+      { name: "KodeKloud Engineer - Docker (Level 1)", link: "https://engineer.kodekloud.com/certificate-verification/555c6b2e-5046-4b67-80cd-18e38e50553e" },
+      { name: "Crash Course: Docker For Absolute Beginners", link: "https://learn.kodekloud.com/user/certificate/7f32ecfe-0d52-4bb6-ae70-edcc9dccf415" },
+      { name: "Amazon Elastic Container Service (AWS ECS)", link: "https://learn.kodekloud.com/user/certificate/6f1a6522-b264-4b71-9d10-d474fe5d9591" },
+      { name: "Crash Course: Kubernetes For Absolute Beginners", link: "https://learn.kodekloud.com/user/certificate/bdedb83b-ea89-4b82-94d0-2e3493f379e7" },
+      { name: "Crash Course: Linux For Absolute Beginners", link: "https://learn.kodekloud.com/user/certificate/929ee365-c6fe-4270-ac5b-3f5092147513" },
+      { name: "Docker Training Course for the Absolute Beginner", link: "https://learn.kodekloud.com/user/certificate/9d000ec0-1098-409a-b73f-1567e06651d3" },
+      { name: "Crash Course: AWS Basics", link: "https://learn.kodekloud.com/user/certificate/630a98b7-c2d1-4620-8d71-5d4624cfedd1" },
+      { name: "KodeKloud Engineer - Git (Level 1)", link: "https://engineer.kodekloud.com/certificate-verification/a92e6a6d-93ec-4113-b6e5-0474f8dd4e64" }
     ]
   }
 ];
@@ -133,7 +133,7 @@ export const projects: Project[] = [
     repoName: "TaskFlow",
     description: "Built and deployed a production-grade full-stack task management platform with automated CI/CD workflows, containerized services, reverse proxy architecture, and Infrastructure as Code practices.",
     tech: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "CI/CD"],
-    link: "https://github.com/ShravaniSU/TaskFlow",
+    link: "http://taskflow.shravaniurankar.in/",
     isFeatured: true,
     features: [
       "Complete Task Lifecycle: Full CRUD operational support designed with strict input payload sanitation via Zod.",
@@ -145,7 +145,7 @@ export const projects: Project[] = [
   },
   {
     name: "Secure AWS Bastion Host Architecture",
-    repoName: "aws-bastion-host",
+    repoName: "BastionHost",
     description: "Designed and deployed a secure AWS network architecture with isolated private subnets, hardened SSH access controls, and Bastion Host based administrative access.",
     tech: ["AWS", "VPC", "EC2", "Security Groups", "SSH", "Networking"]
   },
