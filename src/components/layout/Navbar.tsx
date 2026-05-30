@@ -88,14 +88,18 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className={`relative py-1 text-sm font-medium transition-colors duration-300 ${
+                whileHover={{ scale: 1.08, y: -2 }}
+                whileTap={{ scale: 0.96 }}
+                className={`relative py-1 px-3 text-sm font-medium transition-all duration-300 rounded-full ${
                   isActive 
-                    ? 'text-text-primary font-bold' 
+                    ? theme === 'light'
+                      ? 'nav-active-pill font-bold'
+                      : 'text-text-primary font-bold'
                     : 'text-text-secondary hover:text-text-primary'
                 }`}
               >
                 {link.name}
-                {isActive && (
+                {isActive && theme === 'dark' && (
                   <motion.span
                     layoutId="activeNavLine"
                     className="absolute bottom-0 left-0 right-0 h-[3px] rounded-full"
@@ -108,24 +112,28 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
           })}
           
           <div className="flex items-center space-x-4 border-l border-border-color pl-6 ml-2">
-            <a 
+            <motion.a 
               href="https://github.com/ShravaniSU" 
               target="_blank" 
               rel="noreferrer" 
               className="text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
               aria-label="GitHub"
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.92 }}
             >
               <FaGithub size={20} />
-            </a>
-            <a 
+            </motion.a>
+            <motion.a 
               href="https://linkedin.com/in/shravaniurankar" 
               target="_blank" 
               rel="noreferrer" 
               className="text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
               aria-label="LinkedIn"
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.92 }}
             >
               <FaLinkedin size={20} />
-            </a>
+            </motion.a>
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
           </div>
         </div>

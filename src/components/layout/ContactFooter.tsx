@@ -26,7 +26,7 @@ export const Contact = () => {
             
             <div className="space-y-6">
               <a href={`mailto:${profileData.email}`} className="flex items-center group cursor-pointer">
-                <div className="p-4 bg-bg-card border border-[rgba(59,117,151,0.15)] rounded-2xl text-accent-lavender mr-6 group-hover:bg-accent-lavender group-hover:text-white transition-all duration-300">
+                <div className="p-4 bg-bg-card border border-border-color rounded-2xl text-accent-lavender mr-6 group-hover:bg-accent-lavender group-hover:text-[#0A111F] transition-all duration-300">
                   <Mail size={24} />
                 </div>
                 <div>
@@ -36,7 +36,7 @@ export const Contact = () => {
               </a>
               
               <a href={profileData.linkedin} target="_blank" rel="noreferrer" className="flex items-center group cursor-pointer">
-                <div className="p-4 bg-bg-card border border-[rgba(59,117,151,0.15)] rounded-2xl text-[#0077b5] mr-6 group-hover:bg-[#0077b5] group-hover:text-white transition-all duration-300">
+                <div className="p-4 bg-bg-card border border-border-color rounded-2xl text-[#0077b5] mr-6 group-hover:bg-[#0077b5] group-hover:text-[#0A111F] transition-all duration-300">
                   <FaLinkedin size={24} />
                 </div>
                 <div>
@@ -46,7 +46,7 @@ export const Contact = () => {
               </a>
               
               <a href={profileData.github} target="_blank" rel="noreferrer" className="flex items-center group cursor-pointer">
-                <div className="p-4 bg-bg-card border border-[rgba(59,117,151,0.15)] rounded-2xl text-text-primary mr-6 group-hover:bg-text-primary group-hover:text-bg-dark transition-all duration-300">
+                <div className="p-4 bg-bg-card border border-border-color rounded-2xl text-text-primary mr-6 group-hover:bg-text-primary group-hover:text-[#0A111F] transition-all duration-300">
                   <FaGithub size={24} />
                 </div>
                 <div>
@@ -58,14 +58,14 @@ export const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <GlassCard className="p-8 border-[rgba(59,117,151,0.15)]">
+          <GlassCard className="p-8 border-border-color">
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-text-primary ml-1 transition-colors duration-300">Full Name</label>
                 <input 
                   type="text" 
                   placeholder="John Doe"
-                  className="w-full bg-bg-secondary border border-[rgba(59,117,151,0.15)] rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300"
+                  className="w-full bg-[rgba(255,255,255,0.02)] border border-border-color rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300"
                 />
               </div>
               <div className="space-y-2">
@@ -73,7 +73,7 @@ export const Contact = () => {
                 <input 
                   type="email" 
                   placeholder="john@example.com"
-                  className="w-full bg-bg-secondary border border-[rgba(59,117,151,0.15)] rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300"
+                  className="w-full bg-[rgba(255,255,255,0.02)] border border-border-color rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300"
                 />
               </div>
               <div className="space-y-2">
@@ -81,7 +81,7 @@ export const Contact = () => {
                 <textarea 
                   rows={4}
                   placeholder="Tell me about your project..."
-                  className="w-full bg-bg-secondary border border-[rgba(59,117,151,0.15)] rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300 resize-none"
+                  className="w-full bg-[rgba(255,255,255,0.02)] border border-border-color rounded-xl px-4 py-3 text-text-primary font-medium placeholder:text-text-secondary/50 focus:outline-none focus:border-accent-lavender transition-all duration-300 resize-none"
                 />
               </div>
               <button className="btn-primary w-full flex items-center justify-center cursor-pointer">

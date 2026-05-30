@@ -67,7 +67,7 @@ export const education: Education[] = [
 
 export const certificationGroups: CertificationGroup[] = [
   {
-    provider: "Microsoft",
+    provider: "MICROSOFT CERTIFICATIONS",
     certs: [
       { name: "Microsoft Certified: Azure Fundamentals", link: "https://www.credly.com/badges/3c629c85-0b03-4604-82ec-a9d895c0bc09?source=linked_in_profile" },
       { name: "Microsoft Certified: Azure Data Fundamentals", link: "https://www.credly.com/badges/d99f7fc8-291e-4423-8c0d-3bed302c3d1a/public_url" },
@@ -75,7 +75,7 @@ export const certificationGroups: CertificationGroup[] = [
     ]
   },
   {
-    provider: "KodeKloud",
+    provider: "KOKEKLOUD CERTIFICATIONS",
     certs: [
       { name: "KodeKloud Engineer - Docker (Level 1)", link: "https://engineer.kodekloud.com/certificate-verification/555c6b2e-5046-4b67-80cd-18e38e50553e" },
       { name: "Crash Course: Docker For Absolute Beginners", link: "https://learn.kodekloud.com/user/certificate/7f32ecfe-0d52-4bb6-ae70-edcc9dccf415" },

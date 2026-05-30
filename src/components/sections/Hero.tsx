@@ -21,18 +21,18 @@ export const Hero = () => {
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
+          initial={{ y: 35, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20, delay: 0.2 }}
           className="text-6xl md:text-8xl font-display font-bold mb-6 tracking-tight text-text-primary"
         >
           Shravani <span className="text-[var(--accent-secondary)] transition-colors duration-300">Urankar</span>
         </motion.h1>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
+          initial={{ y: 35, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20, delay: 0.4 }}
           className="text-2xl md:text-3xl text-text-secondary font-medium mb-12 h-12 transition-colors duration-300"
         >
           <TypeAnimation
@@ -53,9 +53,9 @@ export const Hero = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
+          initial={{ y: 35, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20, delay: 0.6 }}
           className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-6"
         >
           <a href="#projects" className="btn-primary flex items-center group">

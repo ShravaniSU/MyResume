@@ -3,6 +3,24 @@ import { GlassCard, SectionHeading } from '../ui';
 import { experiences, education, certificationGroups } from '../../data';
 import { Briefcase, GraduationCap, Award, Calendar, MapPin, ExternalLink } from 'lucide-react';
 
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const certVariants = {
+  hidden: { y: 35, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { type: "spring" as const, stiffness: 50, damping: 20 }
+  }
+};
+
 export const Experience = () => {
   return (
     <section id="experience" className="section-padding section-band">
@@ -16,10 +34,10 @@ export const Experience = () => {
           {experiences.map((exp, idx) => (
             <motion.div
               key={`${exp.company}-${exp.role}-${exp.period}`}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ y: 35, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
+              transition={{ type: "spring", stiffness: 50, damping: 20, delay: idx * 0.1 }}
               className="relative"
             >
               {/* Timeline Dot */}
@@ -70,9 +88,15 @@ export const EducationCertifications = () => {
           {/* Education - Left Column */}
           <div className="lg:col-span-5 space-y-8">
             <SectionHeading title="Education" />
-            <div className="space-y-6">
-              {education.map((edu, idx) => (
-                <GlassCard key={edu.period} delay={idx * 0.1} className="relative overflow-hidden group border border-[rgba(59,117,151,0.12)]">
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              {education.map((edu) => (
+                <GlassCard key={edu.period} className="relative overflow-hidden group border border-border-color">
                   <div className="absolute top-0 left-0 w-1 h-full bg-accent-lavender/40 group-hover:bg-accent-lavender transition-all duration-300" />
                   <div className="flex items-start">
                     <div className="p-3 bg-accent-lavender/10 rounded-lg text-accent-lavender mr-4 transition-colors duration-300">
@@ -86,7 +110,7 @@ export const EducationCertifications = () => {
                   </div>
                 </GlassCard>
               ))}
-            </div>
+            </motion.div>
           </div>
           
           {/* Certifications - Right Column */}
@@ -94,27 +118,31 @@ export const EducationCertifications = () => {
             <SectionHeading title="Certifications" />
             
             <div className="space-y-8">
-              {certificationGroups.map((group, groupIdx) => (
-                <div key={group.provider} className="space-y-4">
-                  <h4 className="text-sm font-bold uppercase tracking-wider text-accent-lavender flex items-center space-x-2 border-b border-[rgba(59,117,151,0.20)] pb-2 transition-colors duration-300">
+              {certificationGroups.map((group) => (
+                <div key={group.provider} className="space-y-4 cert-group-card">
+                  <h4 className="text-sm font-bold uppercase tracking-wider text-accent-lavender flex items-center space-x-2 border-b border-border-color pb-2 transition-colors duration-300">
                     <span>{group.provider}</span>
                     <span className="text-xs px-2 py-0.5 rounded-full bg-accent-lavender/10 text-accent-lavender">
                       {group.certs.length}
                     </span>
                   </h4>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    {group.certs.map((cert, certIdx) => (
+                  <motion.div 
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    className="grid grid-cols-1 md:grid-cols-2 gap-3"
+                  >
+                    {group.certs.map((cert) => (
                       <motion.a
                         key={cert.name}
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: (groupIdx * 0.1) + (certIdx * 0.05) }}
-                        className="p-3.5 rounded-xl bg-bg-card border border-[rgba(59,117,151,0.12)] hover:border-accent-mint/30 hover:shadow-md transition-all duration-300 flex items-center justify-between group cursor-pointer"
+                        variants={certVariants}
+                        whileHover={{ y: -4, scale: 1.01 }}
+                        className="p-3.5 rounded-xl bg-bg-card border border-border-color hover:border-accent-mint/30 hover:shadow-md transition-all duration-300 flex items-center justify-between group cursor-pointer"
                       >
                         <div className="flex items-center mr-2">
                           <div className="p-2 bg-accent-mint/10 rounded-lg text-accent-mint mr-3 group-hover:scale-110 transition-transform duration-300">
@@ -127,7 +155,7 @@ export const EducationCertifications = () => {
                         <ExternalLink size={14} className="text-text-primary opacity-0 group-hover:opacity-100 group-hover:text-accent-mint transition-all duration-300 flex-shrink-0" />
                       </motion.a>
                     ))}
-                  </div>
+                  </motion.div>
                 </div>
               ))}
             </div>

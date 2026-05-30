@@ -2,62 +2,58 @@
 
 :root {
   /* Dark Theme */
-  --bg-primary: #0f0e17;
-  --bg-secondary: #1a1a2e;
-  --bg-band: #141427;
-  --bg-card: rgba(255, 255, 255, 0.05);
-  --bg-card-hover: rgba(255, 255, 255, 0.08);
-  --text-primary: #fffffe;
-  --text-secondary: #94a3b8;
-  --accent-lavender: #a78bfa;
-  --accent-mint: #6ee7b7;
-  --accent-pink: #f9a8d4;
-  --accent-beige: #fde68a;
-  /* Ensure violet-only accents in dark mode */
+  --bg-primary: #0A111F;
+  --bg-secondary: #123038;
+  --bg-band: #162A35;
+  --bg-card: rgba(255, 255, 255, 0.02);
+  --bg-card-hover: rgba(255, 255, 255, 0.05);
+  --bg-band: #162A35;
+  --text-primary: #FFFFFF;
+  --text-secondary: #94A3B8;
+  --accent-lavender: #5DF8D8;
+  --accent-mint: #5DF8D8;
+  --accent-pink: #5DF8D8;
+  --accent-beige: #5DF8D8;
   --bg-odd: var(--bg-primary);
   --bg-even: var(--bg-band);
-  --bg-card-solid: rgba(255,255,255,0.02);
-  --accent-primary: #a78bfa;
-  --accent-secondary: #a78bfa;
-  --accent-medium: #a78bfa;
-  --accent-strong: #a78bfa;
-  --accent-mint: #a78bfa;
-  --accent-pink: #a78bfa;
-  --accent-beige: #a78bfa;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --section-border: rgba(255, 255, 255, 0.06);
-  --primary-start: #667eea;
-  --primary-end: #764ba2;
-  --shadow-color: rgba(0, 0, 0, 0.4);
-  --nav-active-accent: #6ee7b7;
+  --bg-card-solid: rgba(255, 255, 255, 0.02);
+  --accent-primary: #5DF8D8;
+  --accent-secondary: #5DF8D8;
+  --accent-medium: #5DF8D8;
+  --accent-strong: #5DF8D8;
+  --border-color: rgba(93, 248, 216, 0.15);
+  --section-border: rgba(93, 248, 216, 0.08);
+  --primary-start: #5DF8D8;
+  --primary-end: #123038;
+  --shadow-color: rgba(10, 17, 31, 0.6);
+  --nav-active-accent: #5DF8D8;
 }
 
 [data-theme="light"] {
-  /* Structural light theme colors */
-  --bg-primary: #F4F7F9; /* warm soft off-white for odd sections */
-  --bg-secondary: #ffffff;
-  /* Even sections: light slate tint */
-  --bg-band: #E6EEF2;
-  --bg-odd: #F4F7F9;
-  --bg-even: #E6EEF2;
-  --bg-card: #ffffff;
-  --bg-card-hover: #F4F7F9;
-  --bg-card-solid: #2C687B; /* Deep Teal for card blocks */
-  --text-primary: #093C5D; /* Prussian Blue for headings - highly readable */
-  --text-secondary: #1D4560; /* Dark slate variant of #3B7597 for body text (high contrast) */
-  /* Map legacy accent tokens to the requested palette */
-  --accent-lavender: #093C5D; /* headings */
-  --accent-mint: #547792;    /* active states */
-  --accent-pink: #547792;    /* medium slate for accents/badges */
-  --accent-beige: #2C687B;   /* deep teal for solid card BG */
-  --accent-primary: #093C5D;
-  --accent-secondary: #3B7597;
-  --accent-medium: #547792;
+  --bg-primary: #F8FCFD;
+  --bg-secondary: rgba(255,255,255,0.75);
+  --bg-band: #F4FAFB;
+  --bg-odd: #F8FCFD;
+  --bg-even: #EEF7F9;
+  --bg-card: rgba(255,255,255,0.9);
+  --bg-card-hover: rgba(255,255,255,0.95);
+  --bg-card-solid: rgba(255,255,255,0.85);
+  --text-primary: #093C5D;
+  --text-secondary: #23465D;
+  --accent-lavender: #0E7490;
+  --accent-mint: #0EA5A4;
+  --accent-pink: #3B82F6;
+  --accent-beige: #0E7490;
+  --accent-primary: #0E7490;
+  --accent-secondary: #0EA5A4;
+  --accent-medium: #0E7490;
   --accent-strong: #093C5D;
-  --border-color: rgba(59, 117, 151, 0.15);
-  --section-border: rgba(59, 117, 151, 0.20); /* clean 1px border using #3B7597 with 20% opacity */
+  --border-color: rgba(9, 60, 93, 0.08);
+  --section-border: rgba(9, 60, 93, 0.08);
   --shadow-color: rgba(9, 60, 93, 0.08);
-  --nav-active-accent: #547792;
+  --nav-active-accent: #0E7490;
+  --primary-start: #0EA5A4;
+  --primary-end: #3B82F6;
 }
 
 @theme {
@@ -103,6 +99,7 @@
 @utility glass {
   background-color: var(--bg-card);
   backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-color);
   border-radius: 1rem;
 }
@@ -113,7 +110,7 @@
 }
 
 @utility btn-primary {
-  @apply px-8 py-3 rounded-full font-bold text-white shadow-lg hover:shadow-[0_16px_32px_-18px_rgba(9,60,93,0.35)] hover:scale-105 transition-all duration-300 cursor-pointer;
+  @apply px-8 py-3 rounded-full font-bold text-[#0A111F] shadow-lg hover:shadow-[0_16px_32px_-18px_rgba(93,248,216,0.35)] hover:scale-105 transition-all duration-300 cursor-pointer;
   background-color: var(--accent-strong);
 }
 
@@ -172,26 +169,122 @@
 
 [data-theme="light"] .glass,
 [data-theme="light"] .glass-card {
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  background-color: var(--bg-secondary) !important;
-  border-color: rgba(59, 117, 151, 0.15) !important;
+  background: rgba(255,255,255,0.75) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-color: rgba(9,60,93,0.08) !important;
+  box-shadow: 0 10px 30px rgba(9,60,93,0.08) !important;
+  border-radius: 24px !important;
 }
 
 /* Light mode specific typography and readability overhaul */
 [data-theme="light"] h2 {
   color: #093C5D !important;
-  font-weight: 900 !important; /* Bold/Black */
-  line-height: 1.625 !important; /* leading-relaxed */
+  font-weight: 800 !important;
 }
 
 [data-theme="light"] p,
 [data-theme="light"] ul,
 [data-theme="light"] li {
-  color: #093C5D !important; /* Prussian Blue for high contrast */
-  font-weight: 500 !important; /* medium font weight */
+  color: #23465D !important;
+  font-weight: 500 !important;
+  line-height: 1.9 !important;
 }
 
 [data-theme="light"] .text-text-secondary {
-  color: #1D4560 !important; /* Steel Blue Dark variant */
+  color: #23465D !important;
+}
+
+/* Light mode section containers */
+[data-theme="light"] .section-band,
+[data-theme="light"] .section-divider {
+  background: transparent !important;
+  border-top-color: rgba(9,60,93,0.06) !important;
+}
+
+/* Light mode capability cards */
+[data-theme="light"] .glass-card.rounded-\[1\.75rem\] {
+  background: rgba(255,255,255,0.9) !important;
+  border: 1px solid rgba(111,209,215,0.35) !important;
+  box-shadow: 0 12px 35px rgba(9,60,93,0.08) !important;
+  border-radius: 24px !important;
+}
+
+/* Light mode stat numbers gradient */
+[data-theme="light"] .stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #0EA5A4, #3B82F6) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  filter: drop-shadow(0 0 10px rgba(93,248,216,0.25));
+}
+
+/* Light mode accent line */
+[data-theme="light"] .accent-line {
+  background: linear-gradient(90deg, #5DF8D8, #3B7597) !important;
+  height: 4px !important;
+  border-radius: 999px !important;
+}
+
+/* Light mode navbar scrolled */
+[data-theme="light"] nav.glass {
+  background: rgba(255,255,255,0.85) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(9,60,93,0.08) !important;
+  box-shadow: 0 1px 3px rgba(9,60,93,0.06) !important;
+}
+
+/* Light mode active nav pill */
+[data-theme="light"] .nav-active-pill {
+  background: rgba(93,248,216,0.15) !important;
+  color: #093C5D !important;
+  border-radius: 999px !important;
+  padding: 4px 12px !important;
+}
+
+/* Light mode buttons */
+[data-theme="light"] .btn-primary {
+  background: linear-gradient(135deg, #0E7490, #0EA5A4) !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(14,116,144,0.25) !important;
+}
+
+[data-theme="light"] .btn-outline {
+  border-color: rgba(9,60,93,0.15) !important;
+  color: #093C5D !important;
+}
+
+[data-theme="light"] .btn-outline:hover {
+  background: rgba(9,60,93,0.05) !important;
+}
+
+/* Light mode form inputs */
+[data-theme="light"] input,
+[data-theme="light"] textarea {
+  background: rgba(255,255,255,0.9) !important;
+  border-color: rgba(9,60,93,0.12) !important;
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus {
+  border-color: #0E7490 !important;
+  box-shadow: 0 0 0 3px rgba(14,116,144,0.1) !important;
+}
+
+/* Light mode certification group wrappers */
+[data-theme="light"] .cert-group-card {
+  padding: 32px !important;
+  border-radius: 24px !important;
+  background: rgba(255,255,255,0.85) !important;
+  border: 1px solid rgba(9,60,93,0.08) !important;
+  box-shadow: 0 10px 30px rgba(9,60,93,0.06) !important;
+}
+
+/* Light mode hover glow overrides for GlassCard */
+[data-theme="light"] .glass-card:hover {
+  border-color: #5DF8D8 !important;
+  box-shadow: 0 15px 40px rgba(93,248,216,0.25) !important;
 }
