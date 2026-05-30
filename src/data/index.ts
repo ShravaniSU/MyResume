@@ -133,7 +133,7 @@ export const projects: Project[] = [
     repoName: "TaskFlow",
     description: "Built and deployed a production-grade full-stack task management platform with automated CI/CD workflows, containerized services, reverse proxy architecture, and Infrastructure as Code practices.",
     tech: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "CI/CD"],
-    link: "http://taskflow.shravaniurankar.in/",
+    liveUrl: "http://taskflow.shravaniurankar.in/",
     isFeatured: true,
     features: [
       "Complete Task Lifecycle: Full CRUD operational support designed with strict input payload sanitation via Zod.",
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     repoName: "ansible-static-site-deployment",
     description: "Automated Linux server provisioning and static website deployment using Ansible with reusable role-based infrastructure and Nginx configuration on AWS.",
     tech: ["Ansible", "AWS EC2", "Ubuntu", "Nginx", "React", "TypeScript"],
-    link: "https://github.com/ShravaniSU/Cyberpunk"
+    liveUrl: "https://github.com/ShravaniSU/Cyberpunk"
   },
   {
     name: "Travel Journal (CI/CD)",

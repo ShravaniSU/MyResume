@@ -39,7 +39,8 @@ export interface Project {
   repoName: string;
   description: string;
   tech: string[];
-  link?: string;
+  link?: string;      // GitHub repo URL override (defaults to github.com/ShravaniSU/{repoName})
+  liveUrl?: string;   // Live website URL
   isFeatured?: boolean;
   features?: string[];
 }

@@ -50,8 +50,8 @@ export const Projects = () => {
                 ))}
               </div>
 
-              {/* Action Link: standard link/button that says "View Code" or "Explore Repository" */}
-              <div className="mt-auto pt-4 border-t border-[rgba(59,117,151,0.10)] flex items-center justify-between">
+              {/* Action Links: GitHub always shown + Visit Site button when liveUrl exists */}
+              <div className="mt-auto pt-4 border-t border-[rgba(59,117,151,0.10)] flex items-center gap-3 flex-wrap">
                 <a 
                   href={project.link || `https://github.com/ShravaniSU/${project.repoName}`}
                   target="_blank"
@@ -61,15 +61,16 @@ export const Projects = () => {
                   <FaGithub className="mr-2" size={16} />
                   <span>{project.isFeatured ? "Explore Repository" : "View Code"}</span>
                 </a>
-                {project.link && !project.isFeatured && (
+                {project.liveUrl && (
                   <a 
-                    href={project.link}
+                    href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-text-secondary hover:text-text-primary transition-colors cursor-pointer"
-                    aria-label="External Link"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold px-3 py-1 rounded-lg bg-accent-lavender/10 text-accent-lavender border border-accent-lavender/25 hover:bg-accent-lavender hover:text-white transition-all duration-300 cursor-pointer ml-auto"
+                    aria-label="Visit Live Site"
                   >
-                    <ExternalLink size={16} />
+                    <ExternalLink size={13} />
+                    <span>Visit Site</span>
                   </a>
                 )}
               </div>
