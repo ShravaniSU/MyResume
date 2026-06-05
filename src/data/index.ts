@@ -17,8 +17,10 @@ export const experiences: Experience[] = [
   "period": "Dec 2022 - Present",
   "location": "Gurugram, Haryana, India",
   "description": [
-    "Designed and developed real-time APIs and backend services for scalable enterprise applications.",
-    "Contributed to full-stack architecture design and implementation using modern frameworks and cloud-native practices."
+    "Developed and enhanced backend APIs across multiple modules, delivering business-critical features and ensuring timely project delivery.",
+    "Built solutions for document management, file attachments, and PDF generation using GCP services, helping improve user productivity and reduce manual effort.",
+    "Implemented database and schema changes, resolved production issues, and delivered high-priority change requests while maintaining application stability.",
+    "Worked closely with stakeholders, product owners, and distributed engineering teams to translate business requirements into reliable technical solutions and consistently deliver releases on schedule."
   ]
 },
 {
@@ -27,7 +29,9 @@ export const experiences: Experience[] = [
   "period": "Nov 2020 - Dec 2022",
   "location": "Bangalore Urban, Karnataka, India",
   "description": [
-    "Managed deployment environments and resolved production issues to ensure application stability and reliability.",
+    "Ensured smooth application delivery by managing deployments, supporting release activities, and maintaining production environments for business-critical systems.",
+    "Resolved production incidents through effective troubleshooting and root-cause analysis, contributing to improved system reliability and customer satisfaction.",
+    "Supported continuous improvement initiatives by collaborating with cross-functional teams to implement fixes, enhancements, and operational best practices.",
     "Contributed to system quality improvements through functional validation and testing activities while supporting application development initiatives."
   ]
   },
