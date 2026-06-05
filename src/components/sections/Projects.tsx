@@ -73,7 +73,7 @@ export const Projects = () => {
                   className="inline-flex items-center text-sm font-bold text-accent-lavender hover:text-accent-strong transition-colors cursor-pointer"
                 >
                   <FaGithub className="mr-2" size={16} />
-                  <span>{project.isFeatured ? "Explore Repository" : "View Code"}</span>
+                  <span>{project.isFeatured ? "Explore Repository" : "Explore Repository"}</span>
                 </a>
                 {project.liveUrl && (
                   <a 

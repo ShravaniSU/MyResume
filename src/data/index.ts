@@ -12,26 +12,24 @@ export const profileData: Profile = {
 
 export const experiences: Experience[] = [
   {
-    company: "Accenture",
-    role: "Custom Software Engineering Analyst",
-    period: "Dec 2022 - Present",
-    location: "Gurugram, Haryana, India",
-    description: [
-      "Leading DevOps initiatives and infrastructure automation.",
-      "Optimizing cloud resource utilization on AWS.",
-      "Developing and maintaining CI/CD pipelines for various projects."
-    ]
-  },
-  {
-    company: "Accenture",
-    role: "Application Development Associate",
-    period: "Nov 2020 - Dec 2022",
-    location: "Bangalore Urban, Karnataka, India",
-    description: [
-      "Assisted in full-stack application development using modern frameworks.",
-      "Managed deployment environments and troubleshooting production issues.",
-      "Collaborated with cross-functional teams to deliver high-quality software."
-    ]
+  "company": "Accenture",
+  "role": "Custom Software Engineering Analyst",
+  "period": "Dec 2022 - Present",
+  "location": "Gurugram, Haryana, India",
+  "description": [
+    "Designed and developed real-time APIs and backend services for scalable enterprise applications.",
+    "Contributed to full-stack architecture design and implementation using modern frameworks and cloud-native practices."
+  ]
+},
+{
+  "company": "Accenture",
+  "role": "Application Development Associate",
+  "period": "Nov 2020 - Dec 2022",
+  "location": "Bangalore Urban, Karnataka, India",
+  "description": [
+    "Managed deployment environments and resolved production issues to ensure application stability and reliability.",
+    "Contributed to system quality improvements through functional validation and testing activities while supporting application development initiatives."
+  ]
   },
   {
     company: "Noesys Software Pvt. Ltd.",
@@ -142,6 +140,36 @@ export const projects: Project[] = [
       "Infrastructure as Code (IaC): Single-command reproducible hardware definitions utilizing HashiCorp Terraform alongside declarative Ansible scripts.",
       "Automated CI/CD Blueprint: Production pipeline running integration compilation checks prior to rolling container deployments."
     ]
+  },
+  {
+  name: "System Monitoring Dashboard [SysMon]",
+  repoName: "SysMon",
+  description: "Built and deployed a real-time infrastructure observability platform with live system metrics, WebSocket-based monitoring, historical analytics and automated service health management.",
+  tech: [
+    "React",
+    "TypeScript",
+    "Node.js",
+    "MongoDB",
+    "Redis",
+    "Docker",
+    "Nginx",
+    "Socket.io"
+  ],
+  liveUrl: "https://your-domain.com",
+  },
+  {
+  name: "Pomodoro Timer",
+  repoName: "PomodoroTimer",
+  description: "Built and deployed a modern productivity-focused Pomodoro Timer application with animated session workflows, configurable focus cycles, browser notifications, persistent user settings, and responsive UI design.",
+  tech: [
+    "React",
+    "TypeScript",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "localStorage"
+  ],
+  liveUrl: "https://pomodoro-timer-pink-one.vercel.app/",
   },
   {
     name: "Secure AWS Bastion Host Architecture",
