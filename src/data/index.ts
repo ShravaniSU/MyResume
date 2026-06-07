@@ -99,7 +99,8 @@ export const skills: SkillCategory[] = [
       { name: "Kubernetes" },
       { name: "Linux" },
       { name: "Amazon EC2" },
-      { name: "Amazon S3" }
+      { name: "Amazon S3" },
+      { name: "Terraform" }
     ]
   },
   {
@@ -157,7 +158,7 @@ export const projects: Project[] = [
     "Redis",
     "Docker",
     "Nginx",
-    "Socket.io"
+    "Github Actions"
   ],
   liveUrl: "http://sysmon.shravaniurankar.in/",
   },
