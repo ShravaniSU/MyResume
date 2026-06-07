@@ -159,7 +159,7 @@ export const projects: Project[] = [
     "Nginx",
     "Socket.io"
   ],
-  liveUrl: "https://your-domain.com",
+  liveUrl: "http://sysmon.shravaniurankar.in/",
   },
   {
   name: "Pomodoro Timer",
