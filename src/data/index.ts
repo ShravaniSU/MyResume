@@ -182,23 +182,17 @@ export const projects: Project[] = [
     tech: ["AWS", "VPC", "EC2", "Security Groups", "SSH", "Networking"]
   },
   {
+    name: "Travel Journal (CI/CD)",
+    repoName: "TravelJournal",
+    description: "Personal travel journal with automated CI/CD pipeline using GitHub Actions for seamless deployment.",
+    tech: ["React", "Vite", "GitHub Actions", "CI/CD"],
+    liveUrl: "https://travel.shravaniurankar.in/"
+  },
+  {
     name: "Terraform AWS Infrastructure Project",
     repoName: "terraform-aws-infra",
     description: "Automated cloud infrastructure provisioning on AWS using Terraform with reproducible Infrastructure as Code workflows and secure remote server access.",
     tech: ["Terraform", "AWS", "EC2", "IAM", "Ubuntu", "SSH"]
-  },
-  {
-    name: "Cyberpunk Static Website Deployment with Ansible",
-    repoName: "ansible-static-site-deployment",
-    description: "Automated Linux server provisioning and static website deployment using Ansible with reusable role-based infrastructure and Nginx configuration on AWS.",
-    tech: ["Ansible", "AWS EC2", "Ubuntu", "Nginx", "React", "TypeScript"],
-    liveUrl: "https://github.com/ShravaniSU/Cyberpunk"
-  },
-  {
-    name: "Travel Journal (CI/CD)",
-    repoName: "TravelJournal",
-    description: "Personal travel journal with automated CI/CD pipeline using GitHub Actions for seamless deployment.",
-    tech: ["React", "Vite", "GitHub Actions", "CI/CD"]
   },
   {
     name: "Nginx Log Analyser",
