@@ -86,7 +86,8 @@ export const certificationGroups: CertificationGroup[] = [
       { name: "Crash Course: Linux For Absolute Beginners", link: "https://learn.kodekloud.com/user/certificate/929ee365-c6fe-4270-ac5b-3f5092147513" },
       { name: "Docker Training Course for the Absolute Beginner", link: "https://learn.kodekloud.com/user/certificate/9d000ec0-1098-409a-b73f-1567e06651d3" },
       { name: "Crash Course: AWS Basics", link: "https://learn.kodekloud.com/user/certificate/630a98b7-c2d1-4620-8d71-5d4624cfedd1" },
-      { name: "KodeKloud Engineer - Git (Level 1)", link: "https://engineer.kodekloud.com/certificate-verification/a92e6a6d-93ec-4113-b6e5-0474f8dd4e64" }
+      { name: "KodeKloud Engineer - Git (Level 1)", link: "https://engineer.kodekloud.com/certificate-verification/a92e6a6d-93ec-4113-b6e5-0474f8dd4e64" },
+      { name: "YouTube Labs - Kubernetes Crash Course", link: "https://learn.kodekloud.com/user/certificate/918ea7c2-1628-419c-ba5a-dc2433b718f9"}
     ]
   }
 ];
