@@ -132,6 +132,14 @@ export const skills: SkillCategory[] = [
 ];
 
 export const projects: Project[] = [
+
+  {
+    name: "Employee Attrition Prediction System",
+    repoName: "EmployeeAttrition",
+    description: "Built and deployed an MLOps project that predicts employee attrition using a Random Forest classifier and Gradient Boosting classifier while demonstrating the complete machine learning lifecycle",
+    tech: ["Docker", "Terraform", "ML Flow", "Github Actions", "Caddy"],
+    liveUrl: "https://employeeattrition.shravaniurankar.in/",
+  },
   {
     name: "TaskFlow",
     repoName: "TaskFlow",
