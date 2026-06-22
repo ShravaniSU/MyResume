@@ -197,7 +197,7 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
                   <FaLinkedin size={24} />
                 </a>
                 <a 
-                  href="mailto:shravanisurankar@gmail.com" 
+                  href="mailto:s.shirish.urankar@gmail.com" 
                   className="text-text-secondary hover:text-text-primary transition-colors"
                 >
                   <Mail size={24} />

@@ -45,6 +45,8 @@ export const Hero = () => {
               2000,
               'Automation Geek',
               2000,
+              'MLOps Learner',
+              2000,
             ]}
             wrapper="span"
             speed={50}

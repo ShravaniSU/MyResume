@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
   "company": "Accenture",
   "role": "Application Development Associate",
   "period": "Nov 2020 - Dec 2022",
-  "location": "Bangalore Urban, Karnataka, India",
+  "location": "Bengaluru, Karnataka, India",
   "description": [
     "Ensured smooth application delivery by managing deployments, supporting release activities, and maintaining production environments for business-critical systems.",
     "Resolved production incidents through effective troubleshooting and root-cause analysis, contributing to improved system reliability and customer satisfaction.",
@@ -51,17 +51,17 @@ export const experiences: Experience[] = [
 
 export const education: Education[] = [
   {
-    institution: "Dayananda Sagar College of Engineering, BANGALORE",
+    institution: "Dayananda Sagar College of Engineering, BENGALURU",
     degree: "BE - Information Technology",
     period: "2016 - 2020"
   },
   {
-    institution: "Sir MV PU College",
+    institution: "Sir MV PU College, DAVANAGERE",
     degree: "11th and 12th, PCMB",
     period: "2014 - 2016"
   },
   {
-    institution: "Bapuji Higher Primary English Medium School",
+    institution: "Bapuji Higher Primary English Medium School, DAVANAGERE",
     degree: "10th Grade",
     period: "2013 - 2014"
   }
@@ -141,21 +141,6 @@ export const projects: Project[] = [
     liveUrl: "https://employeeattrition.shravaniurankar.in/",
   },
   {
-    name: "TaskFlow",
-    repoName: "TaskFlow",
-    description: "Built and deployed a production-grade full-stack task management platform with automated CI/CD workflows, containerized services, reverse proxy architecture, and Infrastructure as Code practices.",
-    tech: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "CI/CD"],
-    liveUrl: "http://taskflow.shravaniurankar.in/",
-    isFeatured: true,
-    features: [
-      "Complete Task Lifecycle: Full CRUD operational support designed with strict input payload sanitation via Zod.",
-      "Isolated Multi-Container Ecosystem: Isolated networks keeping the PostgreSQL layer decoupled from outside web exposure.",
-      "Nginx Reverse Proxy: Unified traffic routing directing client request boundaries across specific container boundaries seamlessly.",
-      "Infrastructure as Code (IaC): Single-command reproducible hardware definitions utilizing HashiCorp Terraform alongside declarative Ansible scripts.",
-      "Automated CI/CD Blueprint: Production pipeline running integration compilation checks prior to rolling container deployments."
-    ]
-  },
-  {
   name: "System Monitoring Dashboard [SysMon]",
   repoName: "SysMon",
   description: "Built and deployed a real-time infrastructure observability platform with live system metrics, WebSocket-based monitoring, historical analytics and automated service health management.",
@@ -170,6 +155,14 @@ export const projects: Project[] = [
     "Github Actions"
   ],
   liveUrl: "http://sysmon.shravaniurankar.in/",
+  },
+  {
+    name: "TaskFlow",
+    repoName: "TaskFlow",
+    description: "Built and deployed a production-grade full-stack task management platform with automated CI/CD workflows, containerized services, reverse proxy architecture, and Infrastructure as Code practices.",
+    tech: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "CI/CD"],
+    liveUrl: "http://taskflow.shravaniurankar.in/",
+    isFeatured: true,
   },
   {
   name: "Pomodoro Timer",
