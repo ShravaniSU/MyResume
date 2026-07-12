@@ -89,6 +89,12 @@ export const certificationGroups: CertificationGroup[] = [
       { name: "KodeKloud Engineer - Git (Level 1)", link: "https://engineer.kodekloud.com/certificate-verification/a92e6a6d-93ec-4113-b6e5-0474f8dd4e64" },
       { name: "YouTube Labs - Kubernetes Crash Course", link: "https://learn.kodekloud.com/user/certificate/918ea7c2-1628-419c-ba5a-dc2433b718f9"}
     ]
+  },
+  {
+    provider: "UDEMY CERTIFICATIONS",
+    certs: [
+      { name: "MLOps Zero to Hero", link: "https://udemy-certificate.s3.amazonaws.com/pdf/UC-bad5ba1d-8cac-4860-9a6e-92bc2846cc71.pdf" }
+    ]
   }
 ];
 
@@ -102,6 +108,17 @@ export const skills: SkillCategory[] = [
       { name: "Amazon EC2" },
       { name: "Amazon S3" },
       { name: "Terraform" }
+    ]
+  },
+  {
+    title: "MLOps",
+    skills: [
+      { name: "ML Flow" },
+      { name: "Kube Flow" },
+      { name: "AWS Sagemaker" },
+      { name: "Argo CD" },
+      { name: "KServe" },
+      { name: "DVC" }
     ]
   },
   {
