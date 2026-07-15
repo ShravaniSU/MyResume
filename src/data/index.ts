@@ -151,6 +151,13 @@ export const skills: SkillCategory[] = [
 export const projects: Project[] = [
 
   {
+  name: "Customer Churn Prediction System",
+  repoName: "Churn-Predictor-Model",
+  description: "Built and deployed an end-to-end MLOps pipeline for customer churn prediction using a machine learning classifier, featuring automated model training, dataset and model versioning with DVC, scalable model serving with KServe on Kubernetes, and CI/CD automation using GitHub Actions.",
+  tech: ["Python", "FastAPI", "DVC", "Amazon S3", "Kubernetes (Kind)", "KServe", "GitHub Actions"],
+  liveUrl: "https://churnprediction.shravaniurankar.in/",
+  },
+  {
     name: "Employee Attrition Prediction System",
     repoName: "EmployeeAttrition",
     description: "Built and deployed an MLOps project that predicts employee attrition using a Random Forest classifier and Gradient Boosting classifier while demonstrating the complete machine learning lifecycle",
@@ -172,6 +179,18 @@ export const projects: Project[] = [
     "Github Actions"
   ],
   liveUrl: "http://sysmon.shravaniurankar.in/",
+  },
+  {
+  name: "Iris Classification Pipeline",
+  repoName: "IrisClassificationPipeline",
+  description: "Built an end-to-end machine learning workflow using Kubeflow Pipelines (KFP) to automate data loading, model training, and evaluation of a Random Forest classifier on the Iris dataset, demonstrating containerized ML orchestration on Kubernetes.",
+  tech: ["Python", "Kubeflow Pipelines", "scikit-learn", "Docker", "Kubernetes"],
+  },
+  {
+  name: "Intent Classification API",
+  repoName: "IntentClassifier",
+  description: "Built and deployed a machine learning REST API for intent classification using Scikit-learn and Flask, demonstrating an end-to-end ML workflow including text preprocessing, model training, model serialization, containerization, and automated deployment.",
+  tech: ["Python", "Flask", "Scikit-learn", "Docker", "Kubernetes"],
   },
   {
     name: "TaskFlow",
