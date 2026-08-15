@@ -4,10 +4,10 @@ export const profileData: Profile = {
   name: "Shravani Shirish Urankar",
   title: "DevOps Engineer",
   location: "Bengaluru, Karnataka, India",
-  email: "shravanisurankar@gmail.com",
+  email: "s.shirish.urankar@gmail.com",
   linkedin: "https://www.linkedin.com/in/shravaniurankar",
   github: "https://github.com/ShravaniSU",
-  summary: "Results-driven DevOps Engineer with over 5 years of experience in custom software engineering and application development. Proven expertise in Linux administration, AWS cloud services (EC2, S3), and building automated infrastructure solutions. Passionate about streamlining development workflows through CI/CD pipelines, containerization, and robust monitoring systems."
+  summary: "Backend and DevOps Engineer with 5 years of experience delivering enterprise applications, scalable REST APIs, production support, and automated deployment workflows. Experienced in designing 100+ REST APIs, troubleshooting critical production systems, and collaborating across development, QA, and infrastructure teams to deliver reliable business-critical solutions."
 };
 
 export const experiences: Experience[] = [
@@ -17,10 +17,9 @@ export const experiences: Experience[] = [
   "period": "Dec 2022 - Present",
   "location": "Gurugram, Haryana, India",
   "description": [
-    "Developed and enhanced backend APIs across multiple modules, delivering business-critical features and ensuring timely project delivery.",
-    "Built solutions for document management, file attachments, and PDF generation using GCP services, helping improve user productivity and reduce manual effort.",
-    "Implemented database and schema changes, resolved production issues, and delivered high-priority change requests while maintaining application stability.",
-    "Worked closely with stakeholders, product owners, and distributed engineering teams to translate business requirements into reliable technical solutions and consistently deliver releases on schedule."
+    "Designed and implemented 100+ scalable REST APIs across multiple enterprise modules and applications, delivering business-critical backend solutions with consistent on-time project delivery.",
+    "Collaborated with development, QA, and infrastructure teams to resolve production issues, support application releases, and deliver business-critical features with a 90% success rate across engagements.",
+    "Accelerated production issue resolution by integrating GitHub Copilot into debugging workflows, improving troubleshooting efficiency for complex backend incidents across distributed systems."
   ]
 },
 {
@@ -29,10 +28,9 @@ export const experiences: Experience[] = [
   "period": "Nov 2020 - Dec 2022",
   "location": "Bengaluru, Karnataka, India",
   "description": [
-    "Ensured smooth application delivery by managing deployments, supporting release activities, and maintaining production environments for business-critical systems.",
-    "Resolved production incidents through effective troubleshooting and root-cause analysis, contributing to improved system reliability and customer satisfaction.",
-    "Supported continuous improvement initiatives by collaborating with cross-functional teams to implement fixes, enhancements, and operational best practices.",
-    "Contributed to system quality improvements through functional validation and testing activities while supporting application development initiatives."
+    "Drove incident resolution for 15+ critical production systems, resolving most incidents within the same business day and minimizing operational downtime.",
+    "Partnered with development, QA, and infrastructure teams to streamline release processes and support successful deployment of application enhancements.",
+    "Supported 4+ enterprise applications through production monitoring, troubleshooting, incident resolution, and continuous improvement initiatives."
   ]
   },
   {

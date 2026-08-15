@@ -37,6 +37,8 @@ export const Hero = () => {
         >
           <TypeAnimation
             sequence={[
+              'MLOps Practitioner',
+              2000,
               'DevOps Engineer',
               2000,
               'Cloud Enthusiast',
@@ -44,9 +46,7 @@ export const Hero = () => {
               'Linux Specialist',
               2000,
               'Automation Geek',
-              2000,
-              'MLOps Learner',
-              2000,
+              2000
             ]}
             wrapper="span"
             speed={50}

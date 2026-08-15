@@ -33,6 +33,9 @@ export const About = () => {
               {profileData.summary}
             </p>
             <p>
+              Passionate about MLOps, cloud-native technologies, CI/CD automation, containerization, and infrastructure management, with hands-on experience building automated machine learning pipelines, model lifecycle workflows, and production monitoring platforms using AWS, Docker, Kubernetes, GitHub Actions, Terraform, MLflow, DVC, and FastAPI.
+            </p>
+            <p>
               I specialize in bridging the gap between development and operations, ensuring that software is not only built well but also deployed and maintained with maximum efficiency.
             </p>
             
