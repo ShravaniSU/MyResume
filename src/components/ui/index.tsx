@@ -7,10 +7,12 @@ interface GlassCardProps {
   children: ReactNode;
   className?: string;
   delay?: number;
+  variant?: 'default' | 'compact';
 }
 
-export const GlassCard = ({ children, className = "", delay }: GlassCardProps) => {
+export const GlassCard = ({ children, className = "", delay, variant = 'default' }: GlassCardProps) => {
   const isDirectTrigger = delay !== undefined;
+  const paddingClass = variant === 'compact' ? 'p-3 md:p-4' : 'p-6';
   return (
     <motion.div
       variants={{
@@ -25,7 +27,7 @@ export const GlassCard = ({ children, className = "", delay }: GlassCardProps) =
       whileInView={isDirectTrigger ? "visible" : undefined}
       viewport={isDirectTrigger ? { once: true } : undefined}
       whileHover={{ y: -5, scale: 1.01 }}
-      className={`glass-card p-6 hover:border-[#5DF8D8] ${className}`}
+      className={`glass-card ${paddingClass} hover:border-[#5DF8D8] ${className}`}
     >
       {children}
     </motion.div>

@@ -1,15 +1,35 @@
 import { motion } from 'framer-motion';
 import { GlassCard, SectionHeading } from '../ui';
 import { profileData, skills } from '../../data';
-import { Terminal, Cpu, Cloud, Settings, Layers } from 'lucide-react';
+import { 
+  Terminal, 
+  Cpu, 
+  Cloud, 
+  Layers, 
+  Activity, 
+  Code2, 
+  Database, 
+  Bot 
+} from 'lucide-react';
 
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.1
+      staggerChildren: 0.05
     }
   }
+};
+
+const getSkillCategoryIcon = (title: string) => {
+  const t = title.toLowerCase();
+  if (t.includes('cloud') || t.includes('devops')) return <Cloud className="mr-2 text-accent-lavender" size={20} />;
+  if (t.includes('mlops')) return <Cpu className="mr-2 text-accent-lavender" size={20} />;
+  if (t.includes('languages') || t.includes('frameworks')) return <Code2 className="mr-2 text-accent-lavender" size={20} />;
+  if (t.includes('databases')) return <Database className="mr-2 text-accent-lavender" size={20} />;
+  if (t.includes('ai development') || t.includes('tools')) return <Bot className="mr-2 text-accent-lavender" size={20} />;
+  if (t.includes('infrastructure')) return <Layers className="mr-2 text-accent-lavender" size={20} />;
+  return <Terminal className="mr-2 text-accent-lavender" size={20} />;
 };
 
 export const About = () => {
@@ -18,7 +38,7 @@ export const About = () => {
       <div className="container mx-auto">
         <SectionHeading 
           title="About Me" 
-          subtitle="My journey from application development to specialized DevOps engineering." 
+          subtitle="Backend engineering experience, evolving into DevOps and MLOps." 
         />
         
         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -38,17 +58,6 @@ export const About = () => {
             <p>
               I specialize in bridging the gap between development and operations, ensuring that software is not only built well but also deployed and maintained with maximum efficiency.
             </p>
-            
-            <div className="grid grid-cols-2 gap-6 pt-6">
-              <div className="space-y-2">
-                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">5+</h4>
-                <p className="text-sm">Years Experience</p>
-              </div>
-              <div className="space-y-2">
-                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">8+</h4>
-                <p className="text-sm">Public Projects</p>
-              </div>
-            </div>
           </motion.div>
 
           <motion.div 
@@ -56,28 +65,49 @@ export const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="grid grid-cols-2 gap-4"
+            className="capability-dashboard space-y-4"
           >
-            <GlassCard className="flex flex-col items-center text-center p-8 rounded-[1.75rem]">
-              <Terminal className="text-[var(--accent-strong)] mb-4" size={32} />
-              <h4 className="text-text-primary font-bold mb-2">Automation</h4>
-              <p className="text-text-secondary text-xs">Bash & Python scripting for efficient workflows.</p>
-            </GlassCard>
-            <GlassCard className="flex flex-col items-center text-center p-8 rounded-[1.75rem]">
-              <Cloud className="text-[var(--accent-strong)] mb-4" size={32} />
-              <h4 className="text-text-primary font-bold mb-2">Cloud</h4>
-              <p className="text-text-secondary text-xs">AWS & Azure infrastructure management.</p>
-            </GlassCard>
-            <GlassCard className="flex flex-col items-center text-center p-8 rounded-[1.75rem]">
-              <Layers className="text-[var(--accent-strong)] mb-4" size={32} />
-              <h4 className="text-text-primary font-bold mb-2">CI/CD</h4>
-              <p className="text-text-secondary text-xs">Robust pipelines using GitHub Actions.</p>
-            </GlassCard>
-            <GlassCard className="flex flex-col items-center text-center p-8 rounded-[1.75rem]">
-              <Settings className="text-[var(--accent-strong)] mb-4" size={32} />
-              <h4 className="text-text-primary font-bold mb-2">Monitoring</h4>
-              <p className="text-text-secondary text-xs">Netdata & log analysis for system health.</p>
-            </GlassCard>
+            <div className="grid grid-cols-2 gap-4">
+              <GlassCard className="flex flex-col items-center text-center p-6 rounded-[1.75rem]">
+                <Cpu className="text-[var(--accent-strong)] mb-4" size={32} />
+                <h4 className="text-text-primary font-bold mb-2">MLOps</h4>
+                <p className="text-text-secondary text-xs">Automated ML pipelines, Model lifecycle workflows</p>
+              </GlassCard>
+              <GlassCard className="flex flex-col items-center text-center p-6 rounded-[1.75rem]">
+                <Layers className="text-[var(--accent-strong)] mb-4" size={32} />
+                <h4 className="text-text-primary font-bold mb-2">DevOps</h4>
+                <p className="text-text-secondary text-xs">CI/CD, Containers, Deployment automation</p>
+              </GlassCard>
+              <GlassCard className="flex flex-col items-center text-center p-6 rounded-[1.75rem]">
+                <Cloud className="text-[var(--accent-strong)] mb-4" size={32} />
+                <h4 className="text-text-primary font-bold mb-2">Cloud</h4>
+                <p className="text-text-secondary text-xs">AWS, Infrastructure, Production deployments</p>
+              </GlassCard>
+              <GlassCard className="flex flex-col items-center text-center p-6 rounded-[1.75rem]">
+                <Activity className="text-[var(--accent-strong)] mb-4" size={32} />
+                <h4 className="text-text-primary font-bold mb-2">Observability</h4>
+                <p className="text-text-secondary text-xs">System monitoring, Metrics, Operational tooling</p>
+              </GlassCard>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <GlassCard variant="compact" className="flex flex-col items-center text-center rounded-[1.75rem]">
+                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">5+</h4>
+                <p className="text-xs font-semibold text-text-secondary">Years Experience</p>
+              </GlassCard>
+              <GlassCard variant="compact" className="flex flex-col items-center text-center rounded-[1.75rem]">
+                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">100+</h4>
+                <p className="text-xs font-semibold text-text-secondary">REST APIs</p>
+              </GlassCard>
+              <GlassCard variant="compact" className="flex flex-col items-center text-center rounded-[1.75rem]">
+                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">15+</h4>
+                <p className="text-xs font-semibold text-text-secondary">Production Systems</p>
+              </GlassCard>
+              <GlassCard variant="compact" className="flex flex-col items-center text-center rounded-[1.75rem]">
+                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">8+</h4>
+                <p className="text-xs font-semibold text-text-secondary">Public Projects</p>
+              </GlassCard>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -100,12 +130,12 @@ export const Skills = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12"
         >
           {skills.map((category) => (
             <GlassCard key={category.title} className="h-full border-border-color hover:border-accent-lavender/30 transition-all duration-300">
               <h3 className="text-xl font-bold mb-6 text-accent-lavender flex items-center transition-colors duration-300">
-                <Cpu className="mr-2" size={20} />
+                {getSkillCategoryIcon(category.title)}
                 {category.title}
               </h3>
               <div className="flex flex-wrap gap-2">

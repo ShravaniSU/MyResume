@@ -12,26 +12,26 @@ export const profileData: Profile = {
 
 export const experiences: Experience[] = [
   {
-  "company": "Accenture",
-  "role": "Custom Software Engineering Analyst",
-  "period": "Dec 2022 - Present",
-  "location": "Gurugram, Haryana, India",
-  "description": [
-    "Designed and implemented 100+ scalable REST APIs across multiple enterprise modules and applications, delivering business-critical backend solutions with consistent on-time project delivery.",
-    "Collaborated with development, QA, and infrastructure teams to resolve production issues, support application releases, and deliver business-critical features with a 90% success rate across engagements.",
-    "Accelerated production issue resolution by integrating GitHub Copilot into debugging workflows, improving troubleshooting efficiency for complex backend incidents across distributed systems."
-  ]
-},
-{
-  "company": "Accenture",
-  "role": "Application Development Associate",
-  "period": "Nov 2020 - Dec 2022",
-  "location": "Bengaluru, Karnataka, India",
-  "description": [
-    "Drove incident resolution for 15+ critical production systems, resolving most incidents within the same business day and minimizing operational downtime.",
-    "Partnered with development, QA, and infrastructure teams to streamline release processes and support successful deployment of application enhancements.",
-    "Supported 4+ enterprise applications through production monitoring, troubleshooting, incident resolution, and continuous improvement initiatives."
-  ]
+    company: "Accenture",
+    role: "Custom Software Engineering Analyst",
+    period: "Dec 2022 - Present",
+    location: "Gurugram, Haryana, India",
+    description: [
+      "Designed and implemented <strong class=\"text-accent-lavender font-extrabold\">100+ REST APIs</strong> across multiple modules, delivering reliable and scalable backend solutions.",
+      "Collaborated with cross-functional teams to resolve production issues and support application releases with high success rate.",
+      "Accelerated troubleshooting efficiency for complex incidents across distributed systems by integrating GitHub Copilot."
+    ]
+  },
+  {
+    company: "Accenture",
+    role: "Application Development Associate",
+    period: "Nov 2020 - Dec 2022",
+    location: "Bengaluru, Karnataka, India",
+    description: [
+      "Drove incident resolution for <strong class=\"text-accent-lavender font-extrabold\">15+ critical production systems</strong>, minimizing operational downtime.",
+      "Partnered with development and QA teams to support successful deployments of application enhancements.",
+      "Supported <strong class=\"text-accent-lavender font-extrabold\">4+ enterprise applications</strong> through monitoring, troubleshooting, and continuous improvement."
+    ]
   },
   {
     company: "Noesys Software Pvt. Ltd.",
@@ -98,167 +98,216 @@ export const certificationGroups: CertificationGroup[] = [
 
 export const skills: SkillCategory[] = [
   {
-    title: "Tools & DevOps/Cloud Infrastructure",
+    title: "Cloud & DevOps",
     skills: [
       { name: "Docker" },
       { name: "Kubernetes" },
-      { name: "Linux" },
-      { name: "Amazon EC2" },
-      { name: "Amazon S3" },
-      { name: "Terraform" }
+      { name: "AWS EC2" },
+      { name: "AWS S3" },
+      { name: "AWS ECS" },
+      { name: "AWS CloudWatch" },
+      { name: "GitHub Actions" },
+      { name: "Jenkins" },
+      { name: "Linux" }
     ]
   },
   {
-    title: "MLOps",
+    title: "MLOps & ML Infrastructure",
     skills: [
-      { name: "ML Flow" },
-      { name: "Kube Flow" },
-      { name: "AWS Sagemaker" },
-      { name: "Argo CD" },
+      { name: "MLflow" },
+      { name: "DVC" },
+      { name: "DagsHub" },
       { name: "KServe" },
-      { name: "DVC" }
+      { name: "Model Registry" },
+      { name: "Experiment Tracking" },
+      { name: "CI/CD Automation" }
     ]
   },
   {
-    title: "Languages",
+    title: "Languages & Frameworks",
     skills: [
-      { name: "Java" },
-      { name: "C#" },
       { name: "Python" },
-      { name: "JavaScript" }
+      { name: "C#" },
+      { name: "Java" },
+      { name: "JavaScript" },
+      { name: ".NET" },
+      { name: "React" },
+      { name: "Node.js" }
     ]
   },
   {
-    title: "Frameworks & Libraries",
+    title: "Infrastructure",
     skills: [
-      { name: ".NET (Dotnet)" },
-      { name: "React" },
-      { name: "HTML5" },
-      { name: "CSS3" }
+      { name: "Terraform" },
+      { name: "Docker" },
+      { name: "Kubernetes" },
+      { name: "Linux" }
     ]
   },
   {
     title: "Databases",
     skills: [
       { name: "PostgreSQL" },
-      { name: "MySQL" }
+      { name: "MySQL" },
+      { name: "MongoDB" },
+      { name: "Redis" }
+    ]
+  },
+  {
+    title: "AI Development Tools",
+    skills: [
+      { name: "GitHub Copilot" },
+      { name: "Claude" },
+      { name: "Gemini" },
+      { name: "OpenAI Codex" },
+      { name: "Grok" }
     ]
   }
 ];
 
 export const projects: Project[] = [
-
   {
-  name: "Customer Churn Prediction System",
-  repoName: "Churn-Predictor-Model",
-  description: "Built and deployed an end-to-end MLOps pipeline for customer churn prediction using a machine learning classifier, featuring automated model training, dataset and model versioning with DVC, scalable model serving with KServe on Kubernetes, and CI/CD automation using GitHub Actions.",
-  tech: ["Python", "FastAPI", "DVC", "Amazon S3", "Kubernetes (Kind)", "KServe", "GitHub Actions"],
-  liveUrl: "https://churnprediction.shravaniurankar.in/",
-  },
-  {
-    name: "Employee Attrition Prediction System",
-    repoName: "EmployeeAttrition",
-    description: "Built and deployed an MLOps project that predicts employee attrition using a Random Forest classifier and Gradient Boosting classifier while demonstrating the complete machine learning lifecycle",
-    tech: ["Docker", "Terraform", "ML Flow", "Github Actions", "Caddy"],
+    id: "employee-attrition-prediction",
+    title: "Employee Attrition Prediction",
+    category: "MLOps",
+    badge: "featured",
+    description: "Built and deployed an end-to-end MLOps platform for employee attrition prediction using a 1,470-record HR dataset. Integrates MLflow and DagsHub for experiment tracking and model registry, automated quality gates requiring F1 ≥ 0.4, and GitHub Actions CI/CD to build and deploy to AWS EC2.",
+    tags: ["Docker", "Terraform", "MLflow", "DagsHub", "FastAPI", "GitHub Actions", "AWS EC2"],
+    repoUrl: "https://github.com/ShravaniSU/EmployeeAttrition",
     liveUrl: "https://employeeattrition.shravaniurankar.in/",
+    order: 1
   },
   {
-  name: "System Monitoring Dashboard [SysMon]",
-  repoName: "SysMon",
-  description: "Built and deployed a real-time infrastructure observability platform with live system metrics, WebSocket-based monitoring, historical analytics and automated service health management.",
-  tech: [
-    "React",
-    "TypeScript",
-    "Node.js",
-    "MongoDB",
-    "Redis",
-    "Docker",
-    "Nginx",
-    "Github Actions"
-  ],
-  liveUrl: "http://sysmon.shravaniurankar.in/",
+    id: "customer-churn-prediction",
+    title: "Customer Churn Prediction",
+    category: "MLOps",
+    badge: "featured",
+    description: "Developed an end-to-end MLOps pipeline for customer churn prediction, automating the workflow from dataset generation and model training to model artifact publishing. Built GitHub Actions automation to retrain, publish to Amazon S3, and update Kubernetes manifests.",
+    tags: ["Python", "FastAPI", "DVC", "Amazon S3", "Kubernetes", "KServe", "GitHub Actions"],
+    repoUrl: "https://github.com/ShravaniSU/Churn-Predictor-Model",
+    liveUrl: "https://churnprediction.shravaniurankar.in/",
+    order: 2
   },
   {
-  name: "Iris Classification Pipeline",
-  repoName: "IrisClassificationPipeline",
-  description: "Built an end-to-end machine learning workflow using Kubeflow Pipelines (KFP) to automate data loading, model training, and evaluation of a Random Forest classifier on the Iris dataset, demonstrating containerized ML orchestration on Kubernetes.",
-  tech: ["Python", "Kubeflow Pipelines", "scikit-learn", "Docker", "Kubernetes"],
+    id: "sysmon",
+    title: "SysMon",
+    category: "DevOps / Observability",
+    badge: "featured",
+    description: "Developed a production-grade infrastructure observability platform delivering real-time CPU, RAM, disk I/O, and network metrics through WebSockets. Architected MongoDB/Redis storage in a 5-service Docker Compose layout, provisioned with Terraform, and deployed via GitHub Actions.",
+    tags: ["React", "TypeScript", "Node.js", "MongoDB", "Redis", "Docker", "Terraform", "GitHub Actions"],
+    repoUrl: "https://github.com/ShravaniSU/SysMon",
+    liveUrl: "http://sysmon.shravaniurankar.in/",
+    order: 3
   },
   {
-  name: "Intent Classification API",
-  repoName: "IntentClassifier",
-  description: "Built and deployed a machine learning REST API for intent classification using Scikit-learn and Flask, demonstrating an end-to-end ML workflow including text preprocessing, model training, model serialization, containerization, and automated deployment.",
-  tech: ["Python", "Flask", "Scikit-learn", "Docker", "Kubernetes"],
-  },
-  {
-    name: "TaskFlow",
-    repoName: "TaskFlow",
-    description: "Built and deployed a production-grade full-stack task management platform with automated CI/CD workflows, containerized services, reverse proxy architecture, and Infrastructure as Code practices.",
-    tech: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "CI/CD"],
+    id: "taskflow",
+    title: "TaskFlow",
+    category: "DevOps / Full Stack",
+    description: "Built and deployed a production-oriented full-stack task management platform with automated CI/CD workflows, containerized services, reverse proxy architecture, and Infrastructure as Code practices.",
+    tags: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "CI/CD"],
+    repoUrl: "https://github.com/ShravaniSU/TaskFlow",
     liveUrl: "http://taskflow.shravaniurankar.in/",
-    isFeatured: true,
+    order: 4
   },
   {
-  name: "Pomodoro Timer",
-  repoName: "PomodoroTimer",
-  description: "Built and deployed a modern productivity-focused Pomodoro Timer application with animated session workflows, configurable focus cycles, browser notifications, persistent user settings, and responsive UI design.",
-  tech: [
-    "React",
-    "TypeScript",
-    "Vite",
-    "Tailwind CSS",
-    "Framer Motion",
-    "localStorage"
-  ],
-  liveUrl: "https://pomodoro-timer-pink-one.vercel.app/",
+    id: "iris-classification",
+    title: "Iris Classification Pipeline",
+    category: "MLOps",
+    description: "Built an end-to-end machine learning workflow using Kubeflow Pipelines to automate data loading, model training, and evaluation of a Random Forest classifier on Kubernetes.",
+    tags: ["Python", "Kubeflow Pipelines", "scikit-learn", "Docker", "Kubernetes"],
+    repoUrl: "https://github.com/ShravaniSU/IrisClassificationPipeline",
+    order: 5
   },
   {
-    name: "Secure AWS Bastion Host Architecture",
-    repoName: "BastionHost",
-    description: "Designed and deployed a secure AWS network architecture with isolated private subnets, hardened SSH access controls, and Bastion Host based administrative access.",
-    tech: ["AWS", "VPC", "EC2", "Security Groups", "SSH", "Networking"]
+    id: "intent-classification",
+    title: "Intent Classification API",
+    category: "ML / Backend",
+    description: "Built and deployed a machine learning REST API for intent classification using Scikit-learn and Flask, including model training, serialization, containerization, and automated deployment.",
+    tags: ["Python", "Flask", "Scikit-learn", "Docker", "Kubernetes"],
+    repoUrl: "https://github.com/ShravaniSU/IntentClassifier",
+    order: 6
   },
   {
-    name: "Travel Journal (CI/CD)",
-    repoName: "TravelJournal",
-    description: "Personal travel journal with automated CI/CD pipeline using GitHub Actions for seamless deployment.",
-    tech: ["React", "Vite", "GitHub Actions", "CI/CD"],
-    liveUrl: "https://travel.shravaniurankar.in/"
+    id: "secure-aws-bastion",
+    title: "Secure AWS Bastion Host Architecture",
+    category: "Cloud Infrastructure",
+    description: "Designed and deployed a secure AWS network architecture with isolated private subnets, hardened SSH access controls, and Bastion Host-based administrative access.",
+    tags: ["AWS", "VPC", "EC2", "Security Groups", "SSH", "Networking"],
+    repoUrl: "https://github.com/ShravaniSU/BastionHost",
+    order: 7
   },
   {
-    name: "Terraform AWS Infrastructure Project",
-    repoName: "terraform-aws-infra",
-    description: "Automated cloud infrastructure provisioning on AWS using Terraform with reproducible Infrastructure as Code workflows and secure remote server access.",
-    tech: ["Terraform", "AWS", "EC2", "IAM", "Ubuntu", "SSH"]
+    id: "terraform-aws-infra",
+    title: "Terraform AWS Infrastructure",
+    category: "Infrastructure as Code",
+    description: "Automated AWS infrastructure provisioning using Terraform with reproducible Infrastructure as Code workflows and secure remote server access.",
+    tags: ["Terraform", "AWS", "EC2", "IAM", "Ubuntu", "SSH"],
+    repoUrl: "https://github.com/ShravaniSU/terraform-aws-infra",
+    order: 8
   },
   {
-    name: "Nginx Log Analyser",
-    repoName: "NginxLogAnalyser",
+    id: "travel-journal",
+    title: "Travel Journal",
+    category: "CI/CD",
+    description: "Built a React/Vite application with an automated GitHub Actions CI/CD workflow for seamless deployment.",
+    tags: ["React", "Vite", "GitHub Actions", "CI/CD"],
+    repoUrl: "https://github.com/ShravaniSU/TravelJournal",
+    liveUrl: "https://travel.shravaniurankar.in/",
+    order: 9
+  },
+  {
+    id: "pomodoro-timer",
+    title: "Pomodoro Timer",
+    category: "Frontend / Productivity",
+    description: "Built and deployed a modern productivity-focused Pomodoro Timer application with animated session workflows, configurable focus cycles, browser notifications, persistent user settings, and responsive UI design.",
+    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "localStorage"],
+    repoUrl: "https://github.com/ShravaniSU/PomodoroTimer",
+    liveUrl: "https://pomodoro-timer-pink-one.vercel.app/",
+    order: 10
+  },
+  {
+    id: "nginx-log-analyser",
+    title: "Nginx Log Analyser",
+    category: "Automation / Scripting",
     description: "Bash script for analyzing Nginx access logs to identify traffic patterns and issues.",
-    tech: ["Bash", "Awk", "Linux"]
+    tags: ["Bash", "Awk", "Linux"],
+    repoUrl: "https://github.com/ShravaniSU/NginxLogAnalyser",
+    order: 11
   },
   {
-    name: "Log Archive Tool",
-    repoName: "LogArchiveTool",
+    id: "log-archive-tool",
+    title: "Log Archive Tool",
+    category: "Automation / Scripting",
     description: "CLI tool to compress and archive logs with timestamped filenames and scheduling support.",
-    tech: ["Bash", "Linux"]
+    tags: ["Bash", "Linux"],
+    repoUrl: "https://github.com/ShravaniSU/LogArchiveTool",
+    order: 12
   },
   {
-    name: "Server Performance Stats",
-    repoName: "ServerPerformanceStats",
+    id: "server-performance-stats",
+    title: "Server Performance Stats",
+    category: "Automation / Scripting",
     description: "Monitoring script to track CPU, memory, and disk usage on Linux servers.",
-    tech: ["Bash", "Shell"]
+    tags: ["Bash", "Shell"],
+    repoUrl: "https://github.com/ShravaniSU/ServerPerformanceStats",
+    order: 13
   },
   {
-    name: "Netdata Dashboard Setup",
-    repoName: "SimpleMonitoringUsingNetData",
+    id: "netdata-dashboard-setup",
+    title: "Netdata Dashboard Setup",
+    category: "Observability / Automation",
     description: "Automated workflow for Netdata monitoring agent installation and alert configuration.",
-    tech: ["Bash", "Netdata", "Automation"]
+    tags: ["Bash", "Netdata", "Automation"],
+    repoUrl: "https://github.com/ShravaniSU/SimpleMonitoringUsingNetData",
+    order: 14
   },
   {
-    name: "Dummy Systemd Service",
-    repoName: "DummySystemmdService",
+    id: "dummy-systemd-service",
+    title: "Dummy Systemd Service",
+    category: "Automation / Scripting",
     description: "Automation script for creating and managing custom systemd services.",
-    tech: ["Bash", "Systemd"]
+    tags: ["Bash", "Systemd"],
+    repoUrl: "https://github.com/ShravaniSU/DummySystemmdService",
+    order: 15
   }
 ];

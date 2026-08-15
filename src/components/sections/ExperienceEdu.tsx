@@ -67,7 +67,7 @@ export const Experience = () => {
                   {exp.description.map((item, i) => (
                     <li key={i} className="text-text-primary text-base font-medium flex items-start transition-colors duration-300">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent-medium mt-2 mr-3 flex-shrink-0" />
-                      {item}
+                      <span dangerouslySetInnerHTML={{ __html: item }} />
                     </li>
                   ))}
                 </ul>
@@ -85,36 +85,8 @@ export const EducationCertifications = () => {
     <section id="education" className="section-padding section-divider">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-12 gap-16">
-          {/* Education - Left Column */}
-          <div className="lg:col-span-5 space-y-8">
-            <SectionHeading title="Education" />
-            <motion.div 
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="space-y-6"
-            >
-              {education.map((edu) => (
-                <GlassCard key={edu.period} className="relative overflow-hidden group border border-border-color">
-                  <div className="absolute top-0 left-0 w-1 h-full bg-accent-lavender/40 group-hover:bg-accent-lavender transition-all duration-300" />
-                  <div className="flex items-start">
-                    <div className="p-3 bg-accent-lavender/10 rounded-lg text-accent-lavender mr-4 transition-colors duration-300">
-                      <GraduationCap size={24} />
-                    </div>
-                    <div>
-                      <h4 className="font-extrabold text-xl mb-1 text-text-primary transition-colors duration-300">{edu.degree}</h4>
-                      <p className="text-text-secondary text-base font-medium mb-2 transition-colors duration-300">{edu.institution}</p>
-                      <p className="text-accent-medium text-xs font-extrabold uppercase tracking-widest transition-colors duration-300">{edu.period}</p>
-                    </div>
-                  </div>
-                </GlassCard>
-              ))}
-            </motion.div>
-          </div>
-          
-          {/* Certifications - Right Column */}
-          <div className="lg:col-span-7 space-y-8">
+          {/* Certifications - Left Column (Wider: col-span-8) */}
+          <div className="lg:col-span-8 space-y-8">
             <SectionHeading title="Certifications" />
             
             <div className="space-y-8">
@@ -132,7 +104,7 @@ export const EducationCertifications = () => {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-3"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3"
                   >
                     {group.certs.map((cert) => (
                       <motion.a
@@ -159,6 +131,34 @@ export const EducationCertifications = () => {
                 </div>
               ))}
             </div>
+          </div>
+
+          {/* Education - Right Column (Narrower: col-span-4) */}
+          <div className="lg:col-span-4 space-y-8">
+            <SectionHeading title="Education" />
+            <motion.div 
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              className="space-y-6"
+            >
+              {education.map((edu) => (
+                <GlassCard key={edu.period} className="relative overflow-hidden group border border-border-color">
+                  <div className="absolute top-0 left-0 w-1 h-full bg-accent-lavender/40 group-hover:bg-accent-lavender transition-all duration-300" />
+                  <div className="flex items-start">
+                    <div className="p-3 bg-accent-lavender/10 rounded-lg text-accent-lavender mr-4 transition-colors duration-300">
+                      <GraduationCap size={24} />
+                    </div>
+                    <div>
+                      <h4 className="font-extrabold text-xl mb-1 text-text-primary transition-colors duration-300">{edu.degree}</h4>
+                      <p className="text-text-secondary text-base font-medium mb-2 transition-colors duration-300">{edu.institution}</p>
+                      <p className="text-accent-medium text-xs font-extrabold uppercase tracking-widest transition-colors duration-300">{edu.period}</p>
+                    </div>
+                  </div>
+                </GlassCard>
+              ))}
+            </motion.div>
           </div>
         </div>
       </div>

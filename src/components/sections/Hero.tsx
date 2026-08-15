@@ -4,7 +4,7 @@ import { ChevronDown, ArrowRight } from 'lucide-react';
 
 export const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 section-padding section-divider">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-20 section-padding section-divider">
       {/* Animated Background Blobs */}
       <div className="absolute top-1/4 -left-20 w-72 h-72 bg-accent-lavender/15 rounded-full blur-[128px] animate-blob pointer-events-none" />
       <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-accent-pink/10 rounded-full blur-[128px] animate-blob animation-delay-2000 pointer-events-none" />
@@ -33,19 +33,19 @@ export const Hero = () => {
           initial={{ y: 35, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: "spring", stiffness: 50, damping: 20, delay: 0.4 }}
-          className="text-2xl md:text-3xl text-text-secondary font-medium mb-12 h-12 transition-colors duration-300"
+          className="text-2xl md:text-3xl text-text-secondary font-medium mb-4 h-16 transition-colors duration-300"
         >
           <TypeAnimation
             sequence={[
-              'MLOps Practitioner',
+              'MLOps Engineer',
               2000,
               'DevOps Engineer',
               2000,
-              'Cloud Enthusiast',
+              'Backend Engineer',
               2000,
-              'Linux Specialist',
+              'Cloud & Infrastructure Engineer',
               2000,
-              'Automation Geek',
+              'CI/CD Automation Engineer',
               2000
             ]}
             wrapper="span"
@@ -53,6 +53,15 @@ export const Hero = () => {
             repeat={Infinity}
           />
         </motion.div>
+
+        <motion.p
+          initial={{ y: 35, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 50, damping: 20, delay: 0.5 }}
+          className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10 leading-relaxed font-medium transition-colors duration-300"
+        >
+          Building reliable software, automated infrastructure, and production-ready ML systems.
+        </motion.p>
 
         <motion.div
           initial={{ y: 35, opacity: 0 }}

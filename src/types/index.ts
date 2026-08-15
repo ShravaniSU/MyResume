@@ -35,14 +35,15 @@ export interface CertificationGroup {
 }
 
 export interface Project {
-  name: string;
-  repoName: string;
+  id: string;
+  title: string;
+  category: string;
+  badge?: 'featured';
   description: string;
-  tech: string[];
-  link?: string;      // GitHub repo URL override (defaults to github.com/ShravaniSU/{repoName})
-  liveUrl?: string;   // Live website URL
-  isFeatured?: boolean;
-  features?: string[];
+  tags: string[];
+  repoUrl: string;
+  liveUrl?: string;
+  order: number;
 }
 
 export interface SkillCategory {
