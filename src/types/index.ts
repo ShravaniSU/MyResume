@@ -55,3 +55,27 @@ export interface Skill {
   name: string;
   icon?: string; // We'll use this for mapping icons
 }
+
+export interface BlogContentBlock {
+  type: 'heading' | 'paragraph' | 'code' | 'list' | 'quote';
+  text?: string;
+  level?: 2 | 3;
+  items?: string[];
+  code?: string;
+  language?: string;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  slug: string;
+  category: string;
+  tags: string[];
+  excerpt: string;
+  date: string;
+  readTime: string;
+  content: BlogContentBlock[];
+  featured: boolean;
+  published: boolean;
+}
+

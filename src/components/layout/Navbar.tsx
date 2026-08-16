@@ -4,12 +4,14 @@ import { Menu, X, Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { ThemeToggle } from '../ui';
 import type { Theme } from '../../hooks/useTheme';
+import { Link, useLocation } from 'react-router-dom';
 
 const navLinks = [
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
+  { name: 'Blogs', href: '/blogs', isRoute: true },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -18,10 +20,13 @@ interface NavbarProps {
   toggleTheme: () => void;
 }
 
+const MotionLink = motion(Link);
+
 export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,8 +34,10 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     };
     window.addEventListener('scroll', handleScroll);
 
-    // IntersectionObserver scroll-spy
-    const sections = navLinks.map(link => document.querySelector(link.href));
+    // IntersectionObserver scroll-spy (exclude route-based links)
+    const sections = navLinks
+      .filter(link => !link.isRoute)
+      .map(link => document.querySelector(link.href));
     
     const observerOptions = {
       root: null,
@@ -68,23 +75,57 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <motion.a
-          href="#"
+        <MotionLink
+          to="/"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           className="text-2xl font-display font-bold text-text-primary hover:text-[var(--accent-secondary)] hover:scale-105 transition-transform"
         >
           SU.
-        </motion.a>
+        </MotionLink>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link, i) => {
-            const isActive = activeSection === link.href;
+            const isRouteActive = link.isRoute && (location.pathname === link.href || location.pathname.startsWith(link.href + '/'));
+            const isActive = link.isRoute ? isRouteActive : (activeSection === link.href && !location.pathname.startsWith('/blogs'));
+            const href = link.isRoute ? link.href : (location.pathname.startsWith('/blogs') ? `/${link.href}` : link.href);
+
+            if (link.isRoute) {
+              return (
+                <MotionLink
+                  key={link.name}
+                  to={href}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  whileHover={{ scale: 1.08, y: -2 }}
+                  whileTap={{ scale: 0.96 }}
+                  className={`relative py-1 px-3 text-sm font-medium transition-all duration-300 rounded-full ${
+                    isActive 
+                      ? theme === 'light'
+                        ? 'nav-active-pill font-bold'
+                        : 'text-text-primary font-bold'
+                      : 'text-text-secondary hover:text-text-primary'
+                  }`}
+                >
+                  {link.name}
+                  {isActive && theme === 'dark' && (
+                    <motion.span
+                      layoutId="activeNavLine"
+                      className="absolute bottom-0 left-0 right-0 h-[3px] rounded-full"
+                      style={{ backgroundColor: 'var(--accent-medium)' }}
+                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
+                    />
+                  )}
+                </MotionLink>
+              );
+            }
+
             return (
               <motion.a
                 key={link.name}
-                href={link.href}
+                href={href}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
@@ -162,11 +203,32 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
           >
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => {
-                const isActive = activeSection === link.href;
+                const isRouteActive = link.isRoute && (location.pathname === link.href || location.pathname.startsWith(link.href + '/'));
+                const isActive = link.isRoute ? isRouteActive : (activeSection === link.href && !location.pathname.startsWith('/blogs'));
+                const href = link.isRoute ? link.href : (location.pathname.startsWith('/blogs') ? `/${link.href}` : link.href);
+
+                if (link.isRoute) {
+                  return (
+                    <Link
+                      key={link.name}
+                      to={href}
+                      className={`text-lg font-medium transition-colors pl-2 py-1 ${
+                        isActive 
+                          ? 'text-text-primary font-bold border-l-4 pl-3' 
+                          : 'text-text-secondary hover:text-text-primary'
+                      }`}
+                      style={isActive ? { borderColor: 'var(--accent-medium)' } : undefined}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {link.name}
+                    </Link>
+                  );
+                }
+
                 return (
                   <a
                     key={link.name}
-                    href={link.href}
+                    href={href}
                     className={`text-lg font-medium transition-colors pl-2 py-1 ${
                       isActive 
                         ? 'text-text-primary font-bold border-l-4 pl-3' 
@@ -210,3 +272,4 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     </nav>
   );
 };
+

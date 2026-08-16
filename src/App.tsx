@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useTheme } from './hooks/useTheme';
 import { Navbar } from './components/layout/Navbar';
 import { Hero } from './components/sections/Hero';
@@ -5,6 +7,29 @@ import { About, Skills } from './components/sections/AboutSkills';
 import { Projects } from './components/sections/Projects';
 import { Experience, EducationCertifications } from './components/sections/ExperienceEdu';
 import { Contact, Footer } from './components/layout/ContactFooter';
+import { BlogsPage } from './components/sections/BlogsPage';
+import { BlogDetail } from './components/sections/BlogDetail';
+
+function ScrollToTop() {
+
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+
+  return null;
+}
 
 function App() {
   const { theme, toggleTheme } = useTheme();
@@ -30,21 +55,28 @@ function App() {
         </div>
       )}
       <div className="relative z-10">
+        <ScrollToTop />
         <Navbar theme={theme} toggleTheme={toggleTheme} />
-        <main>
-          <Hero />
-          <About />
-          <div className="section-divider-bar" />
-          <Skills />
-          <div className="section-divider-bar" />
-          <Projects />
-          <div className="section-divider-bar" />
-          <Experience />
-          <div className="section-divider-bar" />
-          <EducationCertifications />
-          <div className="section-divider-bar" />
-          <Contact />
-        </main>
+        <Routes>
+          <Route path="/" element={
+            <main>
+              <Hero />
+              <About />
+              <div className="section-divider-bar" />
+              <Skills />
+              <div className="section-divider-bar" />
+              <Projects />
+              <div className="section-divider-bar" />
+              <Experience />
+              <div className="section-divider-bar" />
+              <EducationCertifications />
+              <div className="section-divider-bar" />
+              <Contact />
+            </main>
+          } />
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/blogs/:slug" element={<BlogDetail />} />
+        </Routes>
         <Footer />
       </div>
     </div>
@@ -52,3 +84,4 @@ function App() {
 }
 
 export default App;
+

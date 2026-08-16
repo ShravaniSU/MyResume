@@ -311,3 +311,6 @@ export const projects: Project[] = [
     order: 15
   }
 ];
+
+export { blogs, getCategoryCounts } from './blogs';
+
