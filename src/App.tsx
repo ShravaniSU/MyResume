@@ -9,6 +9,7 @@ import { Experience, EducationCertifications } from './components/sections/Exper
 import { Contact, Footer } from './components/layout/ContactFooter';
 import { BlogsPage } from './components/sections/BlogsPage';
 import { BlogDetail } from './components/sections/BlogDetail';
+import { MyJourneyPage } from './components/sections/MyJourneyPage';
 
 function ScrollToTop() {
 
@@ -76,6 +77,7 @@ function App() {
           } />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:slug" element={<BlogDetail />} />
+          <Route path="/journey" element={<MyJourneyPage />} />
         </Routes>
         <Footer />
       </div>

@@ -12,6 +12,7 @@ const navLinks = [
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
   { name: 'Blogs', href: '/blogs', isRoute: true },
+  { name: 'My Journey', href: '/journey', isRoute: true },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -68,6 +69,8 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
     };
   }, []);
 
+  const isHomePage = location.pathname === '/';
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -88,8 +91,8 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
         <div className="hidden md:flex items-center space-x-8">
           {navLinks.map((link, i) => {
             const isRouteActive = link.isRoute && (location.pathname === link.href || location.pathname.startsWith(link.href + '/'));
-            const isActive = link.isRoute ? isRouteActive : (activeSection === link.href && !location.pathname.startsWith('/blogs'));
-            const href = link.isRoute ? link.href : (location.pathname.startsWith('/blogs') ? `/${link.href}` : link.href);
+            const isActive = link.isRoute ? isRouteActive : (activeSection === link.href && isHomePage);
+            const href = link.isRoute ? link.href : (!isHomePage ? `/${link.href}` : link.href);
 
             if (link.isRoute) {
               return (
@@ -204,8 +207,8 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
             <div className="flex flex-col p-6 space-y-4">
               {navLinks.map((link) => {
                 const isRouteActive = link.isRoute && (location.pathname === link.href || location.pathname.startsWith(link.href + '/'));
-                const isActive = link.isRoute ? isRouteActive : (activeSection === link.href && !location.pathname.startsWith('/blogs'));
-                const href = link.isRoute ? link.href : (location.pathname.startsWith('/blogs') ? `/${link.href}` : link.href);
+                const isActive = link.isRoute ? isRouteActive : (activeSection === link.href && isHomePage);
+                const href = link.isRoute ? link.href : (!isHomePage ? `/${link.href}` : link.href);
 
                 if (link.isRoute) {
                   return (

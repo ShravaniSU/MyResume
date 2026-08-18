@@ -439,7 +439,7 @@
   transition: height 0.3s;
 }
 [data-theme="light"] .section-divider-bar {
-  height: 120px;
+  height: 40px;
   background: linear-gradient(
     180deg,
     transparent,
