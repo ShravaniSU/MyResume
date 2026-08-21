@@ -1,0 +1,18 @@
+# Shravani Shirish Urankar
+
+> Shravani Shirish Urankar is a Full Stack and DevOps Engineer based in Gurugram, India, specializing in React, TypeScript, Python, AWS, Docker, Kubernetes, CI/CD, and MLOps.
+
+## Professional Profile & Portfolio
+
+- [Portfolio Home](https://shravaniurankar.in/): Main portfolio showcasing full-stack development, cloud architecture, and DevOps automation projects.
+
+## Core Expertise & Skills
+
+- **Frontend & Language:** React, TypeScript, JavaScript, Python
+- **Cloud & DevOps:** AWS, Docker, Kubernetes, CI/CD pipelines, Cloud Automation, MLOps
+- **Location:** Gurugram, India
+
+## Connect & Profiles
+
+- [GitHub Profile](https://github.com/ShravaniSU)
+- [LinkedIn Profile](https://linkedin.com/in/shravaniurankar)

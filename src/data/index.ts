@@ -75,6 +75,12 @@ export const certificationGroups: CertificationGroup[] = [
     ]
   },
   {
+    provider: "COURSERA CERTIFICATIONS",
+    certs: [
+      { name: "Machine Learning in Production", link: "https://www.coursera.org/account/accomplishments/verify/YXTYSKOFAN0Q" }
+    ]
+  },
+  {
     provider: "KOKEKLOUD CERTIFICATIONS",
     certs: [
       { name: "KodeKloud Engineer - Docker (Level 1)", link: "https://engineer.kodekloud.com/certificate-verification/555c6b2e-5046-4b67-80cd-18e38e50553e" },

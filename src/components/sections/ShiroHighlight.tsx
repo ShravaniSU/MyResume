@@ -28,7 +28,6 @@ export const ShiroHighlight = () => {
                   src="https://images.unsplash.com/photo-1552053831-71594a27632d?auto=format&fit=crop&q=80&w=800"
                   alt="Shiro - Beloved Companion"
                   location="Home Base"
-                  caption="Shiro • Constant companion & peace keeper"
                   aspectRatio="aspect-square"
                   className="shadow-xl rounded-2xl"
                 />
