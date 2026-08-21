@@ -90,24 +90,7 @@ export const About = () => {
               </GlassCard>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              <GlassCard variant="compact" className="flex flex-col items-center text-center rounded-[1.75rem]">
-                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">5+</h4>
-                <p className="text-xs font-semibold text-text-secondary">Years Experience</p>
-              </GlassCard>
-              <GlassCard variant="compact" className="flex flex-col items-center text-center rounded-[1.75rem]">
-                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">100+</h4>
-                <p className="text-xs font-semibold text-text-secondary">REST APIs</p>
-              </GlassCard>
-              <GlassCard variant="compact" className="flex flex-col items-center text-center rounded-[1.75rem]">
-                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">15+</h4>
-                <p className="text-xs font-semibold text-text-secondary">Production Systems</p>
-              </GlassCard>
-              <GlassCard variant="compact" className="flex flex-col items-center text-center rounded-[1.75rem]">
-                <h4 className="text-[var(--accent-medium)] text-3xl font-bold transition-colors duration-300 stat-number">8+</h4>
-                <p className="text-xs font-semibold text-text-secondary">Public Projects</p>
-              </GlassCard>
-            </div>
+            
           </motion.div>
         </div>
       </div>
