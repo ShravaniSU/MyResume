@@ -2,12 +2,12 @@ import type { Profile, Experience, Education, CertificationGroup, SkillCategory,
 
 export const profileData: Profile = {
   name: "Shravani Shirish Urankar",
-  title: "DevOps Engineer",
+  title: "MLOps Engineer",
   location: "Bengaluru, Karnataka, India",
   email: "s.shirish.urankar@gmail.com",
   linkedin: "https://www.linkedin.com/in/shravaniurankar",
   github: "https://github.com/ShravaniSU",
-  summary: "Backend and DevOps Engineer with 5 years of experience delivering enterprise applications, scalable REST APIs, production support, and automated deployment workflows. Experienced in designing 100+ REST APIs, troubleshooting critical production systems, and collaborating across development, QA, and infrastructure teams to deliver reliable business-critical solutions."
+  summary: "MLOps and DevOps Engineer with 5 years of experience in enterprise software engineering, production support, and CI/CD automation. Hands-on experience implementing end-to-end ML workflows using Azure Machine Learning, MLflow, and AWS, including model training, experiment tracking, model registration, deployment, and monitoring."
 };
 
 export const experiences: Experience[] = [
@@ -17,9 +17,9 @@ export const experiences: Experience[] = [
     period: "Dec 2022 - Present",
     location: "Gurugram, Haryana, India",
     description: [
-      "Designed and implemented <strong class=\"text-accent-lavender font-extrabold\">100+ REST APIs</strong> across multiple modules, delivering reliable and scalable backend solutions.",
-      "Collaborated with cross-functional teams to resolve production issues and support application releases with high success rate.",
-      "Accelerated troubleshooting efficiency for complex incidents across distributed systems by integrating GitHub Copilot."
+      "Developed and maintained REST APIs for enterprise applications, implementing backend functionality and collaborating with development and infrastructure teams to support application releases and deployments.",
+      "Worked with cross-functional teams to analyze requirements, troubleshoot production and application issues, and deliver solutions aligned with business needs.",
+      "Used GitHub Copilot to assist with code analysis, debugging, and root-cause investigation of complex backend issues."
     ]
   },
   {
@@ -120,12 +120,18 @@ export const skills: SkillCategory[] = [
   {
     title: "MLOps & ML Infrastructure",
     skills: [
+      { name: "Azure Machine Learning" },
       { name: "MLflow" },
       { name: "DVC" },
       { name: "DagsHub" },
       { name: "KServe" },
       { name: "Model Registry" },
       { name: "Experiment Tracking" },
+      { name: "Model Deployment" },
+      { name: "Model Evaluation" },
+      { name: "Data Drift Monitoring" },
+      { name: "Azure ML Jobs" },
+      { name: "Managed Online Endpoints" },
       { name: "CI/CD Automation" }
     ]
   },
@@ -172,16 +178,63 @@ export const skills: SkillCategory[] = [
 ];
 
 export const projects: Project[] = [
+  
+[
+  {
+    id: "intelligent-loan-approval",
+    title: "Intelligent Loan Approval System",
+    category: "MLOps",
+    badge: "featured",
+    description: "Developed an end-to-end loan approval prediction workflow using Python and scikit-learn. Used Azure ML data assets and jobs for dataset management, model training, and evaluation; integrated MLflow for experiment tracking and Azure ML Model Registry for model versioning. Deployed the registered model to a managed online endpoint for real-time inference and configured Azure monitoring with data drift alerts.",
+    tags: [
+      "Python",
+      "Scikit-learn",
+      "Azure Machine Learning",
+      "MLflow",
+      "Model Registry",
+      "Managed Online Endpoints",
+      "Data Drift Monitoring"
+    ],
+    repoUrl: "https://github.com/ShravaniSU/LoanApprovalSystem",
+    liveUrl: "https://loan-approval-system-coral.vercel.app/",
+    order: 1
+  },
   {
     id: "employee-attrition-prediction",
     title: "Employee Attrition Prediction",
     category: "MLOps",
     badge: "featured",
-    description: "Built and deployed an end-to-end MLOps platform for employee attrition prediction using a 1,470-record HR dataset. Integrates MLflow and DagsHub for experiment tracking and model registry, automated quality gates requiring F1 ≥ 0.4, and GitHub Actions CI/CD to build and deploy to AWS EC2.",
-    tags: ["Docker", "Terraform", "MLflow", "DagsHub", "FastAPI", "GitHub Actions", "AWS EC2"],
+    description: "Built an end-to-end employee attrition prediction pipeline using a 1,470-record HR dataset. Integrated MLflow and DagsHub for experiment tracking and model management, implemented an F1-score quality gate (≥ 0.4), and automated data validation, model training, Docker image builds, and AWS EC2 deployment using GitHub Actions CI/CD.",
+    tags: [
+      "Python",
+      "Docker",
+      "MLflow",
+      "DagsHub",
+      "FastAPI",
+      "GitHub Actions",
+      "AWS EC2"
+    ],
     repoUrl: "https://github.com/ShravaniSU/EmployeeAttrition",
     liveUrl: "https://employeeattrition.shravaniurankar.in/",
-    order: 1
+    order: 2
+  },
+  {
+    id: "azure-ai-foundry-agent",
+    title: "Azure AI Foundry Agent Integration",
+    category: "AI Engineering",
+    badge: "",
+    description: "Developed a Python application to integrate Azure AI Foundry Agents using the Azure AI Projects SDK and OpenAI-compatible Responses API. Implemented secure authentication with DefaultAzureCredential, agent version referencing, and conversation ID management to maintain context across multiple interactions.",
+    tags: [
+      "Python",
+      "Azure AI Foundry",
+      "Azure AI Projects SDK",
+      "Azure Identity",
+      "DefaultAzureCredential",
+      "OpenAI Responses API",
+      "AI Agents"
+    ],
+    repoUrl: "https://github.com/ShravaniSU/AzureFirstAgent",
+    order: 3
   },
   {
     id: "customer-churn-prediction",
@@ -192,7 +245,7 @@ export const projects: Project[] = [
     tags: ["Python", "FastAPI", "DVC", "Amazon S3", "Kubernetes", "KServe", "GitHub Actions"],
     repoUrl: "https://github.com/ShravaniSU/Churn-Predictor-Model",
     liveUrl: "https://churnprediction.shravaniurankar.in/",
-    order: 2
+    order: 4
   },
   {
     id: "sysmon",
@@ -203,7 +256,7 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Node.js", "MongoDB", "Redis", "Docker", "Terraform", "GitHub Actions"],
     repoUrl: "https://github.com/ShravaniSU/SysMon",
     liveUrl: "http://sysmon.shravaniurankar.in/",
-    order: 3
+    order: 5
   },
   {
     id: "taskflow",
@@ -213,7 +266,7 @@ export const projects: Project[] = [
     tags: ["Docker", "PostgreSQL", "Nginx", "Terraform", "Ansible", "CI/CD"],
     repoUrl: "https://github.com/ShravaniSU/TaskFlow",
     liveUrl: "http://taskflow.shravaniurankar.in/",
-    order: 4
+    order: 6
   },
   {
     id: "iris-classification",
@@ -222,99 +275,7 @@ export const projects: Project[] = [
     description: "Built an end-to-end machine learning workflow using Kubeflow Pipelines to automate data loading, model training, and evaluation of a Random Forest classifier on Kubernetes.",
     tags: ["Python", "Kubeflow Pipelines", "scikit-learn", "Docker", "Kubernetes"],
     repoUrl: "https://github.com/ShravaniSU/IrisClassificationPipeline",
-    order: 5
-  },
-  {
-    id: "intent-classification",
-    title: "Intent Classification API",
-    category: "ML / Backend",
-    description: "Built and deployed a machine learning REST API for intent classification using Scikit-learn and Flask, including model training, serialization, containerization, and automated deployment.",
-    tags: ["Python", "Flask", "Scikit-learn", "Docker", "Kubernetes"],
-    repoUrl: "https://github.com/ShravaniSU/IntentClassifier",
-    order: 6
-  },
-  {
-    id: "secure-aws-bastion",
-    title: "Secure AWS Bastion Host Architecture",
-    category: "Cloud Infrastructure",
-    description: "Designed and deployed a secure AWS network architecture with isolated private subnets, hardened SSH access controls, and Bastion Host-based administrative access.",
-    tags: ["AWS", "VPC", "EC2", "Security Groups", "SSH", "Networking"],
-    repoUrl: "https://github.com/ShravaniSU/BastionHost",
     order: 7
-  },
-  {
-    id: "terraform-aws-infra",
-    title: "Terraform AWS Infrastructure",
-    category: "Infrastructure as Code",
-    description: "Automated AWS infrastructure provisioning using Terraform with reproducible Infrastructure as Code workflows and secure remote server access.",
-    tags: ["Terraform", "AWS", "EC2", "IAM", "Ubuntu", "SSH"],
-    repoUrl: "https://github.com/ShravaniSU/terraform-aws-infra",
-    order: 8
-  },
-  {
-    id: "travel-journal",
-    title: "Travel Journal",
-    category: "CI/CD",
-    description: "Built a React/Vite application with an automated GitHub Actions CI/CD workflow for seamless deployment.",
-    tags: ["React", "Vite", "GitHub Actions", "CI/CD"],
-    repoUrl: "https://github.com/ShravaniSU/TravelJournal",
-    liveUrl: "https://travel.shravaniurankar.in/",
-    order: 9
-  },
-  {
-    id: "pomodoro-timer",
-    title: "Pomodoro Timer",
-    category: "Frontend / Productivity",
-    description: "Built and deployed a modern productivity-focused Pomodoro Timer application with animated session workflows, configurable focus cycles, browser notifications, persistent user settings, and responsive UI design.",
-    tags: ["React", "TypeScript", "Vite", "Tailwind CSS", "Framer Motion", "localStorage"],
-    repoUrl: "https://github.com/ShravaniSU/PomodoroTimer",
-    liveUrl: "https://pomodoro-timer-pink-one.vercel.app/",
-    order: 10
-  },
-  {
-    id: "nginx-log-analyser",
-    title: "Nginx Log Analyser",
-    category: "Automation / Scripting",
-    description: "Bash script for analyzing Nginx access logs to identify traffic patterns and issues.",
-    tags: ["Bash", "Awk", "Linux"],
-    repoUrl: "https://github.com/ShravaniSU/NginxLogAnalyser",
-    order: 11
-  },
-  {
-    id: "log-archive-tool",
-    title: "Log Archive Tool",
-    category: "Automation / Scripting",
-    description: "CLI tool to compress and archive logs with timestamped filenames and scheduling support.",
-    tags: ["Bash", "Linux"],
-    repoUrl: "https://github.com/ShravaniSU/LogArchiveTool",
-    order: 12
-  },
-  {
-    id: "server-performance-stats",
-    title: "Server Performance Stats",
-    category: "Automation / Scripting",
-    description: "Monitoring script to track CPU, memory, and disk usage on Linux servers.",
-    tags: ["Bash", "Shell"],
-    repoUrl: "https://github.com/ShravaniSU/ServerPerformanceStats",
-    order: 13
-  },
-  {
-    id: "netdata-dashboard-setup",
-    title: "Netdata Dashboard Setup",
-    category: "Observability / Automation",
-    description: "Automated workflow for Netdata monitoring agent installation and alert configuration.",
-    tags: ["Bash", "Netdata", "Automation"],
-    repoUrl: "https://github.com/ShravaniSU/SimpleMonitoringUsingNetData",
-    order: 14
-  },
-  {
-    id: "dummy-systemd-service",
-    title: "Dummy Systemd Service",
-    category: "Automation / Scripting",
-    description: "Automation script for creating and managing custom systemd services.",
-    tags: ["Bash", "Systemd"],
-    repoUrl: "https://github.com/ShravaniSU/DummySystemmdService",
-    order: 15
   }
 ];
 
