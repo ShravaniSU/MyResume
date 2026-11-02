@@ -178,8 +178,6 @@ export const skills: SkillCategory[] = [
 ];
 
 export const projects: Project[] = [
-  
-[
   {
     id: "intelligent-loan-approval",
     title: "Intelligent Loan Approval System",
@@ -222,7 +220,6 @@ export const projects: Project[] = [
     id: "azure-ai-foundry-agent",
     title: "Azure AI Foundry Agent Integration",
     category: "AI Engineering",
-    badge: "",
     description: "Developed a Python application to integrate Azure AI Foundry Agents using the Azure AI Projects SDK and OpenAI-compatible Responses API. Implemented secure authentication with DefaultAzureCredential, agent version referencing, and conversation ID management to maintain context across multiple interactions.",
     tags: [
       "Python",
@@ -280,4 +277,3 @@ export const projects: Project[] = [
 ];
 
 export { blogs, getCategoryCounts } from './blogs';
-
